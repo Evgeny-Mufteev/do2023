@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Главная</title>
+  <meta name="description" content="Нижегородская ярмарка">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <link rel="icon" href="assets/img/favicon.png">
+  <meta property="og:image" content="images/distpromo_img">
+
+  <link rel="stylesheet" type="text/css" href="assets/plugins/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__left">
+          <div class="header__hodden"></div>
+          <div class="header__title-wrap">
+            <h1 class="header__title">Digital-Оттепель</h1>
+            <span class="header__year">2023 y</span>
+          </div>
+          <div class="header__organizers">
+            <div class="header__logo">
+              <svg class="icon logo-header">
+                <use href="./assets/svg/sprite.svg#logo-header"></use>
+              </svg>
+            </div>
+            <span class="header__tagline">— Организаторы конференции</span>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="header__holder">
+            <p class="header__text">
+              Крупнейшая ежегодная конференция в области маркетинга, рекламы и продвижения, коммуникации, брендов и
+              современных технологий.
+            </p>
+            <p class="header__text">
+              Топовые спикеры, инсайты, нетворкинг, афтерпати, воркшопы, знакомства, креатив и мотивация.
+            </p>
+          </div>
+          <div class="header__holder">
+            <button class="header__link">стать партнёром</button>
+            <button class="header__link">Купить билет</button>
+            <a href="javascript:void(0);" class="header__link">Премия</a>
+          </div>
+          <div class="header__holder">
+            <p class="header__data">6-7 апреля</p>
+            <p class="header__adress">Нижний Новгород, ул. Академика Сахарова, 4, технопарк Анкудиновка</p>
+          </div>
+        </div>
+      </div>
+      <div class="header-nav">
+        <nav class="header-nav-menu">
+          <ul class="header-nav-list">
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="javascript:void(0);">Премия</a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="javascript:void(0);">Программма</a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="javascript:void(0);">Спикеры</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <section class="tickets">
+          <div class="tickets__header">
+            <div class="tickets__header-block">
+              <h2 class="tickets__title">Билеты</h2>
+              <p class="tickets__info">Внимание! Количество offline билетов строго ограничено.</p>
+              <p class="tickets__info">Билеты на воркшопы и афтерпати можно приобрести отдельно</p>
+            </div>
+            <div class="tickets__header-block">
+              <div class="timer">
+                <p class="timer-title">До повышения цен</p>
+                <div class="countdown">
+                  <div id="days" class="timer__days">
+                    <span class="timer__number">5</span>
+                  </div>
+
+                  <div class="countdown__block">
+                    <div id="hours" class="timer__hours">
+                      <span class="timer__number">18</span>
+                    </div>
+                    <p class="timer__colon">:</p>
+                    <div id="minutes" class="timer__minutes">
+                      <span class="timer__number">36</span>
+                    </div>
+                    <p class="timer__colon">:</p>
+                    <div id="seconds" class="timer__seconds">
+                      <span class="timer__number">45</span>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="countdown-text">
+                  <div class="timer__days">
+                    <span class="timer__text">дней</span>
+                  </div>
+
+                  <div class="countdown__block">
+                    <div class="timer__hours">
+                      <span class="timer__text">часов</span>
+                    </div>
+                    <div class="timer__minutes">
+                      <span class="timer__text">минут</span>
+                    </div>
+                    <div class="timer__seconds">
+                      <span class="timer__text">секунд</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tickets__item-wrap">
+            <div class="tickets__item">
+              <div class="tickets__item-box">
+                <div class="tickets__item-name">Онлайн</div>
+                <div class="tickets__item-price">
+                  <div class="tickets__item-new">800₽</div>
+                  <div class="tickets__item-old">1 500₽</div>
+                </div>
+              </div>
+              <div class="tickets__item-box">
+                <ul class="tickets__description">
+                  <li class="tickets__description-item">- Билет на 2 дня мероприятия офлайн;</li>
+                  <li class="tickets__description-item">- Материалы конференции (видеозаписи выступлений и презентации
+                    спикеров в PDF)</li>
+                </ul>
+              </div>
+              <div class="tickets__item-box">
+                <button class="btn tickets__btn">Купить</button>
+              </div>
+            </div>
+            <div class="tickets__item">
+              <div class="tickets__item-box">
+                <div class="tickets__item-name">Стандарт</div>
+                <div class="tickets__item-price">
+                  <div class="tickets__item-new">800₽</div>
+                  <div class="tickets__item-old">1 500₽</div>
+                </div>
+              </div>
+              <div class="tickets__item-box">
+                <ul class="tickets__description">
+                  <li class="tickets__description-item">- Билет на 2 дня мероприятия офлайн;</li>
+                  <li class="tickets__description-item">- Материалы конференции (видеозаписи выступлений и презентации
+                    спикеров в PDF)</li>
+                </ul>
+              </div>
+              <div class="tickets__item-box">
+                <button class="btn tickets__btn">Купить</button>
+              </div>
+            </div>
+            <div class="tickets__item">
+              <div class="tickets__item-box">
+                <div class="tickets__item-name">Бизнес</div>
+                <div class="tickets__item-price">
+                  <div class="tickets__item-new">800₽</div>
+                  <div class="tickets__item-old">1 500₽</div>
+                </div>
+              </div>
+              <div class="tickets__item-box">
+                <ul class="tickets__description">
+                  <li class="tickets__description-item">- Билет на 2 дня мероприятия офлайн;</li>
+                  <li class="tickets__description-item">- Возможность участия в воркшопах (2 дня);</li>
+                  <li class="tickets__description-item">- Фирменный пакет участника;</li>
+                  <li class="tickets__description-item">- Материалы конференции (видеозаписи выступлений и презентации
+                    спикеров в PDF);</li>
+                  <li class="tickets__description-item">- Размещения во время выступлений на первых рядах;</li>
+                  <li class="tickets__description-item">- Полноценные обеды и кофе-брейки;</li>
+                  <li class="tickets__description-item">- Доступ на афтерпати</li>
+                  <li class="tickets__description-item">- Материалы конференции (видеозаписи выступлений и презентации
+                    спикеров в PDF)</li>
+
+                </ul>
+              </div>
+              <div class="tickets__item-box">
+                <button class="btn tickets__btn">Купить</button>
+              </div>
+            </div>
+            <div class="tickets__item">
+              <div class="tickets__item-box">
+                <div class="tickets__item-name">Воркшоп</div>
+                <div class="tickets__item-price">
+                  <div class="tickets__item-new">800₽</div>
+                  <div class="tickets__item-old">1 500₽</div>
+                </div>
+              </div>
+              <div class="tickets__item-box">
+                <ul class="tickets__description">
+                  <li class="tickets__description-item">- Возможность участия в воркшопах (2 дня)</li>
+                </ul>
+              </div>
+              <div class="tickets__item-box">
+                <button class="btn tickets__btn">Купить</button>
+              </div>
+            </div>
+            <div class="tickets__item">
+              <div class="tickets__item-box">
+                <div class="tickets__item-name">Афтерпати</div>
+                <div class="tickets__item-price">
+                  <div class="tickets__item-new">800₽</div>
+                  <div class="tickets__item-old">1 500₽</div>
+                </div>
+              </div>
+              <div class="tickets__item-box">
+                <ul class="tickets__description">
+                  <li class="tickets__description-item">- Возможность участия в воркшопах (2 дня)</li>
+                </ul>
+              </div>
+              <div class="tickets__item-box">
+                <button class="btn tickets__btn">Купить</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="workshops">
+          <div class="workshops__header">
+            <h2 class="workshops__header-title">Воркшопы</h2>
+            <p class="workshops__header-info">
+              Вы можете посетить только воркшопы или докупить их к своему билету типа Стандарт. Если у вас билет типа
+              Бизнес, то вам уже доступны все воркшопы — выбирайте и участвуюте.
+            </p>
+          </div>
+          <div class="workshops__item-wrap">
+            <div class="workshops__item">
+              <div class="workshops__item-img">
+                <picture>
+                  <source srcset="./assets/img/index/workshop1.webp" type="image/webp">
+                  <img src="./assets/img/index/workshop1.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="workshops__item-title">ВОРКШОП ОТ MARKETING DIVISION AGENCY</div>
+              <div class="workshops__item-text">Как помочь командам продолжать эффективно креативить в это время</div>
+              <a href="javascript:void(0);" class="workshops__item-link">
+                Читать подробнее
+                <svg class="icon right-arrow">
+                  <use href="./assets/svg/sprite.svg#right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="workshops__item">
+              <div class="workshops__item-img">
+                <picture>
+                  <source srcset="./assets/img/index/workshop2.webp" type="image/webp">
+                  <img src="./assets/img/index/workshop2.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="workshops__item-title">ВОРКШОП ОТ НАТАЛИ БЛАЙБЕРГ</div>
+              <div class="workshops__item-text">
+                "Я считаю, что самый быстрый способ развить личный бренд - это начать заявлять о себе публично, через
+                выступления и социальные сети"
+              </div>
+              <a href="javascript:void(0);" class="workshops__item-link">
+                Читать подробнее
+                <svg class="icon right-arrow">
+                  <use href="./assets/svg/sprite.svg#right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="workshops__item">
+              <div class="workshops__item-img">
+                <picture>
+                  <source srcset="./assets/img/index/workshop3.webp" type="image/webp">
+                  <img src="./assets/img/index/workshop3.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="workshops__item-title">ВОРКШОП ОТ SMM-АГЕНТСТВА DASHDASH</div>
+              <div class="workshops__item-text">Ребята из агентства - это взрывные идеи и вкусная реализация
+                SMM-стратегий: пишут очаровательные тексты и снимают милые плаксивые видосики</div>
+              <a href="javascript:void(0);" class="workshops__item-link">
+                Читать подробнее
+                <svg class="icon right-arrow">
+                  <use href="./assets/svg/sprite.svg#right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="workshops__item">
+              <div class="workshops__item-img">
+                <picture>
+                  <source srcset="./assets/img/index/workshop4.webp" type="image/webp">
+                  <img src="./assets/img/index/workshop4.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="workshops__item-title">ВОРКШОП ОТ КАРИНЫ ОБАТУРОВОЙ</div>
+              <div class="workshops__item-text">
+                Наставник экспертов и блогеров. Миллионер и практик.После работы со мной люди выходят на x2 уровень
+                дохода и жизни, за счет личного бренда, мышления и навыка продаж и прогревов.
+              </div>
+              <a href="javascript:void(0);" class="workshops__item-link">
+                Читать подробнее
+                <svg class="icon right-arrow">
+                  <use href="./assets/svg/sprite.svg#right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="workshops__item">
+              <div class="workshops__item-img">
+                <picture>
+                  <source srcset="./assets/img/index/workshop5.webp" type="image/webp">
+                  <img src="./assets/img/index/workshop5.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="workshops__item-title">ФИНАЛ ОНЛАЙН-ШОУ ОТ «АКР КОНСАЛТИНГ»</div>
+              <div class="workshops__item-text">
+                АКР Консалтинг» решили устроить настоящий консалтинг с мужским характером в формате реалити-шоу.Среди
+                всех агентств, отправивших заявки, одно получит шанс бесплатно прокачать свой бизнес на 360 градусов с
+                опытным ментором.
+              </div>
+              <a href="javascript:void(0);" class="workshops__item-link">
+                Читать подробнее
+                <svg class="icon right-arrow">
+                  <use href="./assets/svg/sprite.svg#right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="workshops__item">
+              <div class="workshops__item-img">
+                <picture>
+                  <source srcset="./assets/img/index/workshop6.webp" type="image/webp">
+                  <img src="./assets/img/index/workshop6.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="workshops__item-title">МАСТЕРМАЙНД ОТ РАССВЕТА</div>
+              <div class="workshops__item-text">
+                Мастермайнд от Рассвета — это коллективный брейншторм. Это комбинация пользы и общения, обучения в
+                действии и способа постановки личных целей и преодоления кризиса идей.
+              </div>
+              <a href="javascript:void(0);" class="workshops__item-link">
+                Читать подробнее
+                <svg class="icon right-arrow">
+                  <use href="./assets/svg/sprite.svg#right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="premium">
+          <div class="premium__header">
+            <div class="premium__header-title">независимая премия среди it-компаний</div>
+            <div class="premium__header-text">
+              Премия рассчитана на региональные digital-агентства, которым есть что показать и чем поделиться. Будем
+              рады видеть в числе участников коллег из Нижнего Новгорода, Казани, Кирова, Пензы, Владимира, других
+              регионов и областей.
+            </div>
+            <button class="btn red-btn premium__btn">Подать заявку</button>
+          </div>
+          <div class="premium__block">
+            <div class="premium__block-item">
+              <div class="premium__block-img">
+                <picture>
+                  <source srcset="./assets/img/index/premium1.webp" type="image/webp">
+                  <img src="./assets/img/index/premium1.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="premium__block-box">
+                <div class="premium__block-title">Прорыв года</div>
+                <div class="premium__block-text">
+                  Номинация для молодых агентств до 5 лет (с момент регистрации юр. лица) и штатом до 15 человек.
+                  Расскажите, как вы стартовали, что было сложного и интересного, куда вы стремитесь и о чем мечтаете
+                </div>
+              </div>
+            </div>
+            <div class="premium__block-item">
+              <div class="premium__block-img">
+                <picture>
+                  <source srcset="./assets/img/index/premium2.webp" type="image/webp">
+                  <img src="./assets/img/index/premium2.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="premium__block-box">
+                <div class="premium__block-title">Web-дизайн</div>
+                <div class="premium__block-text">
+                  В этой номинации мы ждём от вас кейс на дизайн сайтов или сервисов. Если проект ещё не запущен, но
+                  готовы макеты и есть действующий договор, который вы готовы предоставить — смело присылайте!
+                  Похвастайтесь своей работой!
+                </div>
+              </div>
+            </div>
+            <div class="premium__block-item">
+              <div class="premium__block-img">
+                <picture>
+                  <source srcset="./assets/img/index/premium3.webp" type="image/webp">
+                  <img src="./assets/img/index/premium3.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="premium__block-box">
+                <div class="premium__block-title">Продукт/сервис</div>
+                <div class="premium__block-text">
+                  В пандемию запустили крутой сервис? Присылайте! Поделитесь, какая была задача, какие сложности, какие
+                  решения принимались и какой продукт в итоге у вас получился!
+                </div>
+              </div>
+            </div>
+            <div class="premium__block-item">
+              <div class="premium__block-img">
+                <picture>
+                  <source srcset="./assets/img/index/premium4.webp" type="image/webp">
+                  <img src="./assets/img/index/premium4.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="premium__block-box">
+                <div class="premium__block-title">Вклад в сферу диджитал и IT</div>
+                <div class="premium__block-text">
+                  Номинация для компаний, которые на рынке уже более 5 лет. Ваш штат свыше 15 человек. У вас есть
+                  минимум 2 крупных кейса. Расскажите нам о себе и как помогаете развиваться IT-кластеру
+                </div>
+              </div>
+            </div>
+            <div class="premium__block-item">
+              <div class="premium__block-img">
+                <picture>
+                  <source srcset="./assets/img/index/premium5.webp" type="image/webp">
+                  <img src="./assets/img/index/premium5.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="premium__block-box">
+                <div class="premium__block-title">Креатив и смм</div>
+                <div class="premium__block-text">
+                  Данная номинация для тех, кто классно оформляет и ведёт аккаунты, пишет интересные посты, помогает
+                  заказчику снимать Reels. Ждём от вас кейс-гордость
+                </div>
+              </div>
+            </div>
+            <div class="premium__block-item">
+              <div class="premium__block-img">
+                <picture>
+                  <source srcset="./assets/img/index/premium6.webp" type="image/webp">
+                  <img src="./assets/img/index/premium6.jpg" alt="workshop1">
+                </picture>
+              </div>
+              <div class="premium__block-box">
+                <div class="premium__block-title">Реклама и маркетинг</div>
+                <div class="premium__block-text">
+                  Номинация для кейсов, в которых будет уместно упомянуть слово «трафик». Есть удачный опыт ведения
+                  SEO/контекста/таргета или всего вместе? Оформляйте красиво цифры и присылайте нам. Расскажите о своём
+                  успехе!
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="speakers">
+          <div class="speakers__header">
+            <h2 class="speakers__header-title">Спикеры конференции</h2>
+            <div class="speakers__header-btns">
+              <button class="btn black-btn">Смотреть всех спикеров</button>
+              <button class="btn red-btn">хочу стать спикером</button>
+            </div>
+          </div>
+
+          <div class="speakers__block">
+
+            <div class="q1 speakers__block-item">
+              <picture>
+                <source srcset="./assets/img/index/speaker1.webp" type="image/webp">
+                <img src="./assets/img/index/speaker1.png" alt="workshop1">
+              </picture>
+            </div>
+            <div class="q2 speakers__block-item">
+              <picture>
+                <source srcset="./assets/img/index/speaker2.webp" type="image/webp">
+                <img src="./assets/img/index/speaker2.png" alt="workshop1">
+              </picture>
+            </div>
+            <div class="q3 speakers__block-item _big-img">
+              <picture>
+                <source srcset="./assets/img/index/speaker7.webp" type="image/webp">
+                <img src="./assets/img/index/speaker7.png" alt="workshop1">
+              </picture>
+
+            </div>
+            <div class="q4 speakers__block-item">
+              <picture>
+                <source srcset="./assets/img/index/speaker3.webp" type="image/webp">
+                <img src="./assets/img/index/speaker3.png" alt="workshop1">
+              </picture>
+            </div>
+            <div class="q5 speakers__block-item">
+              <picture>
+                <source srcset="./assets/img/index/speaker8.webp" type="image/webp">
+                <img src="./assets/img/index/speaker8.png" alt="workshop1">
+              </picture>
+            </div>
+            <div class="q6 speakers__block-item">
+              <picture>
+                <source srcset="./assets/img/index/speaker9.webp" type="image/webp">
+                <img src="./assets/img/index/speaker9.png" alt="workshop1">
+              </picture>
+            </div>
+            <div class="q7 speakers__block-item _big-img">
+              <picture>
+                <source srcset="./assets/img/index/speaker4.webp" type="image/webp">
+                <img src="./assets/img/index/speaker4.png" alt="workshop1">
+              </picture>
+
+            </div>
+            <div class="q8 speakers__block-item">
+              <picture>
+                <source srcset="./assets/img/index/speaker11.webp" type="image/webp">
+                <img src="./assets/img/index/speaker11.png" alt="workshop1">
+              </picture>
+            </div>
+            <div class="q9 speakers__block-item">
+              <picture>
+                <source srcset="./assets/img/index/speaker10.webp" type="image/webp">
+                <img src="./assets/img/index/speaker10.png" alt="workshop1">
+              </picture>
+            </div>
+            <div class="q10 speakers__block-item">
+              <picture>
+                <source srcset="./assets/img/index/speaker5.webp" type="image/webp">
+                <img src="./assets/img/index/speaker5.png" alt="workshop1">
+              </picture>
+            </div>
+            <div class="q11 speakers__block-item">
+              <picture>
+                <source srcset="./assets/img/index/speaker6.webp" type="image/webp">
+                <img src="./assets/img/index/speaker6.png" alt="workshop1">
+              </picture>
+            </div>
+            <div class="q12 speakers__block-item _big-img">
+              <picture>
+                <source srcset="./assets/img/index/speaker12.webp" type="image/webp">
+                <img src="./assets/img/index/speaker12.png" alt="workshop1">
+              </picture>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="organizers">
+          <div class="organizers__header">
+            <h2 class="organizers__header-title">Организаторы</h2>
+            <p class="organizers__header-text">
+              Принимая во внимание показатели успешности, постоянный количественный рост и сфера нашей активности
+              однозначно определяет каждого участника как способного принимать собственные решения касаемо поставленных
+              обществом задач. А также активно развивающиеся страны третьего мира в равной степени предоставлены сами
+              себе.
+            </p>
+          </div>
+          <div class="organizers__box">
+            <div class="organizers__box-img">
+              <picture>
+                <source srcset="./assets/img/index/dir.webp" type="image/webp">
+                <img src="./assets/img/index/dir.png" alt="workshop1">
+              </picture>
+            </div>
+            <div class="organizers__box-holder">
+              <h4 class="organizers__box-title">Константин Верховинский</h4>
+              <p class="organizers__box-subtitle">генеральный директор агентства интернет-маркетинга R-Top</p>
+              <button class="organizers__box-btn">главный организатор конференции</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="photogallery">
+          <h2 class="photogallery__title">Фотоархив</h2>
+          <div class="photogallery__block swiper">
+            <div class="swiper-wrapper">
+
+              <div class="photogallery__block-item swiper-slide">
+                <picture>
+                  <source srcset="./assets/img/index/photogallery1.webp" type="image/webp">
+                  <img src="./assets/img/index/photogallery1.jpg" alt="workshop1">
+                </picture>
+              </div>
+
+              <div class="photogallery__block-item swiper-slide">
+                <picture>
+                  <source srcset="./assets/img/index/photogallery2.webp" type="image/webp">
+                  <img src="./assets/img/index/photogallery2.jpg" alt="workshop1">
+                </picture>
+              </div>
+
+              <div class="photogallery__block-item swiper-slide">
+                <picture>
+                  <source srcset="./assets/img/index/photogallery3.webp" type="image/webp">
+                  <img src="./assets/img/index/photogallery3.jpg" alt="workshop1">
+                </picture>
+              </div>
+
+              <div class="photogallery__block-item swiper-slide">
+                <picture>
+                  <source srcset="./assets/img/index/photogallery4.webp" type="image/webp">
+                  <img src="./assets/img/index/photogallery4.jpg" alt="workshop1">
+                </picture>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="partners">
+          <div class="partners__title">Партнёры</div>
+          <div class="partners__block">
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo1.webp" type="image/webp">
+                <img src="./assets/img/index/logo1.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo2.webp" type="image/webp">
+                <img src="./assets/img/index/logo2.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo3.webp" type="image/webp">
+                <img src="./assets/img/index/logo3.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo4.webp" type="image/webp">
+                <img src="./assets/img/index/logo4.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo1.webp" type="image/webp">
+                <img src="./assets/img/index/logo1.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo2.webp" type="image/webp">
+                <img src="./assets/img/index/logo2.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo3.webp" type="image/webp">
+                <img src="./assets/img/index/logo3.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo4.webp" type="image/webp">
+                <img src="./assets/img/index/logo4.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo1.webp" type="image/webp">
+                <img src="./assets/img/index/logo1.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo2.webp" type="image/webp">
+                <img src="./assets/img/index/logo2.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo3.webp" type="image/webp">
+                <img src="./assets/img/index/logo3.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo4.webp" type="image/webp">
+                <img src="./assets/img/index/logo4.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="info-partners">
+          <div class="info-partners__title">информационные партнёры</div>
+
+          <div class="info-partners__block">
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo1.webp" type="image/webp">
+                <img src="./assets/img/index/logo1.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo2.webp" type="image/webp">
+                <img src="./assets/img/index/logo2.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo3.webp" type="image/webp">
+                <img src="./assets/img/index/logo3.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo4.webp" type="image/webp">
+                <img src="./assets/img/index/logo4.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo1.webp" type="image/webp">
+                <img src="./assets/img/index/logo1.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo2.webp" type="image/webp">
+                <img src="./assets/img/index/logo2.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo3.webp" type="image/webp">
+                <img src="./assets/img/index/logo3.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo4.webp" type="image/webp">
+                <img src="./assets/img/index/logo4.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo1.webp" type="image/webp">
+                <img src="./assets/img/index/logo1.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo2.webp" type="image/webp">
+                <img src="./assets/img/index/logo2.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo3.webp" type="image/webp">
+                <img src="./assets/img/index/logo3.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+            <div class="partners__block-item">
+              <picture>
+                <source srcset="./assets/img/index/logo4.webp" type="image/webp">
+                <img src="./assets/img/index/logo4.jpg" alt="workshop1">
+              </picture>
+            </div>
+
+          </div>
+        </section>
+
+
+      </div>
+    </main>
+    <footer class="footer">
+    </footer>
+    <div class="overlay"></div>
+  </div>
+  <script src="assets/plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
