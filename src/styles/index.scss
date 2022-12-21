@@ -304,7 +304,7 @@
 
       &:hover {
         position: relative;
-        margin: 120px 0;
+        padding: 100px 0;
 
         .premium__block-img img {
           transform: scale(2.55);
@@ -650,6 +650,7 @@
 
 .partners {
   padding-bottom: 180px;
+  text-transform: uppercase;
 
   &__title {
     font-weight: 400;
@@ -674,7 +675,41 @@
 
 }
 
+.info-partners {
+  padding-bottom: 80px;
 
+  &__title {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__block {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &-item {
+      margin-right: 32px;
+      margin-bottom: 40px;
+
+      &:nth-child(6n) {
+        margin-right: 0;
+      }
+
+      & img {
+        border-radius: 600px;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 1349px) {
 
