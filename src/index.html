@@ -44,9 +44,9 @@
             </p>
           </div>
           <div class="header__holder">
-            <button class="header__link">стать партнёром</button>
-            <button class="header__link">Купить билет</button>
-            <a href="javascript:void(0);" class="header__link">Премия</a>
+            <a href="#premium" class="header__link js-scroll-to">стать партнёром</a>
+            <a href="#tickets" class="header__link js-scroll-to">Купить билет</a>
+            <a href="#premium" class="header__link js-scroll-to">Премия</a>
           </div>
           <div class="header__holder">
             <p class="header__data">6-7 апреля</p>
@@ -72,7 +72,7 @@
     </header>
     <main class="main">
       <div class="container">
-        <section class="tickets">
+        <section class="tickets" id="tickets">
           <div class="tickets__header">
             <div class="tickets__header-block">
               <h2 class="tickets__title">Билеты</h2>
@@ -123,7 +123,8 @@
             </div>
           </div>
           <div class="tickets__item-wrap">
-            <div class="tickets__item">
+
+            <div class="tickets__item" id="online">
               <div class="tickets__item-box">
                 <div class="tickets__item-name">Онлайн</div>
                 <div class="tickets__item-price">
@@ -139,10 +140,10 @@
                 </ul>
               </div>
               <div class="tickets__item-box">
-                <button class="btn tickets__btn">Купить</button>
+                <button class="btn tickets__btn js-buy-ticket">Купить</button>
               </div>
             </div>
-            <div class="tickets__item">
+            <div class="tickets__item" id="standard">
               <div class="tickets__item-box">
                 <div class="tickets__item-name">Стандарт</div>
                 <div class="tickets__item-price">
@@ -158,10 +159,10 @@
                 </ul>
               </div>
               <div class="tickets__item-box">
-                <button class="btn tickets__btn">Купить</button>
+                <button class="btn tickets__btn js-buy-ticket">Купить</button>
               </div>
             </div>
-            <div class="tickets__item">
+            <div class="tickets__item" id="business">
               <div class="tickets__item-box">
                 <div class="tickets__item-name">Бизнес</div>
                 <div class="tickets__item-price">
@@ -185,10 +186,10 @@
                 </ul>
               </div>
               <div class="tickets__item-box">
-                <button class="btn tickets__btn">Купить</button>
+                <button class="btn tickets__btn js-buy-ticket">Купить</button>
               </div>
             </div>
-            <div class="tickets__item">
+            <div class="tickets__item" id="workshop">
               <div class="tickets__item-box">
                 <div class="tickets__item-name">Воркшоп</div>
                 <div class="tickets__item-price">
@@ -202,10 +203,10 @@
                 </ul>
               </div>
               <div class="tickets__item-box">
-                <button class="btn tickets__btn">Купить</button>
+                <button class="btn tickets__btn js-buy-ticket">Купить</button>
               </div>
             </div>
-            <div class="tickets__item">
+            <div class="tickets__item" id="afterparty">
               <div class="tickets__item-box">
                 <div class="tickets__item-name">Афтерпати</div>
                 <div class="tickets__item-price">
@@ -219,7 +220,7 @@
                 </ul>
               </div>
               <div class="tickets__item-box">
-                <button class="btn tickets__btn">Купить</button>
+                <button class="btn tickets__btn js-buy-ticket">Купить</button>
               </div>
             </div>
           </div>
@@ -347,7 +348,7 @@
           </div>
         </section>
 
-        <section class="premium">
+        <section class="premium" id="premium">
           <div class="premium__header">
             <div class="premium__header-title">независимая премия среди <nobr>it-компаний</nobr>
             </div>
@@ -454,7 +455,7 @@
           </div>
         </section>
 
-        <section class="speakers">
+        <section class="speakers" id="speakers">
           <div class="speakers__header">
             <h2 class="speakers__header-title">Спикеры конференции</h2>
             <div class="speakers__header-btns">
@@ -835,17 +836,69 @@
         </div>
         <div class="footer__copyright">
           <a class="footer__copyright-link">© Все права защищены</a>
-          <a href="javascript:void(0);" class="footer__copyright-link">Политика конфиденциальности</a>
-          <a href="javascript:void(0);" class="footer__copyright-link">Разработано в R-Top</a>
+          <a href="javascript:void(0);" class="footer__copyright-link" target="_blank">Политика конфиденциальности</a>
+          <a href="javascript:void(0);" class="footer__copyright-link" target="_blank">Разработано в R-Top</a>
         </div>
       </div>
     </footer>
   </div>
   <div class="overlay"></div>
+
+
+  <div class="popup-ticket js-modal-ticket">
+    <div class="popup-ticket__inner">
+      <div class="popup-ticket__block">
+        <div class="popup-ticket__header">
+          <h4 class="popup-ticket__title">Купить билет</h4>
+          <p class="popup-ticket__subtitle">Перед оплатой необходимо оставить свои актуальные контактные данные</p>
+        </div>
+        <form action="#0" class="form-ticket js-form" novalidate method="get" name="form-ticket">
+
+          <div class="popup-ticket__box">
+            <div class="popup-ticket__input-wrap form-group">
+              <input type="text" class="popup-ticket__input form-control" placeholder="ФИО" required
+                data-pristine-required-message="необходимо заполнить поле">
+            </div>
+
+            <div class="popup-ticket__input-wrap form-group">
+              <input type="email" class="popup-ticket__input form-control" placeholder="Email*" required
+                data-pristine-required-message="необходимо заполнить поле">
+            </div>
+
+            <div class="popup-ticket__input-wrap form-group">
+              <input type="tel" class="popup-ticket__input form-control" placeholder="Номер телефона*" required
+                data-pristine-required-message="необходимо заполнить поле" minlength="18">
+            </div>
+
+            <div class="popup-ticket__checkbox-wrap form-group">
+              <input type="checkbox" class="popup-ticket__checkbox form-control" id="privacy-policy"
+                name="privacy-policy" required data-pristine-required-message="необходимо заполнить поле">
+              <label for="privacy-policy">
+                <p class="privacy-policy__text">
+                  Я согласен на обработку персональных данных и ознакомился с
+                  <a href="javascript:void(0);" class="privacy-policy__link" target="_blank"> политикой
+                    конфиденциальности</a>
+                </p>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn red-btn">Перейти к оплате</button>
+          <input type="hidden" class="js-select-tickets">
+        </form>
+      </div>
+    </div>
+    <div class="popup-ticket__close js-close">
+      <svg class="icon close">
+        <use href="./assets/svg/sprite.svg#close"></use>
+      </svg>
+    </div>
+  </div>
+
   </div>
   <script src="assets/plugins/swiper/swiper-bundle.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="assets/plugins/pristine/pristine.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

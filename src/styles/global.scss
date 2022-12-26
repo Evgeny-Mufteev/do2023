@@ -404,6 +404,27 @@ input::-webkit-inner-spin-button {
   }
 }
 
+.overlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: #3D3D3D;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 19;
+  opacity: 0.6;
+
+  &.active {
+    display: block;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  padding-right: 15px;
+}
+
 @media screen and (max-width: 1349px) {
   .container {
     max-width: 1000px;

@@ -18,6 +18,7 @@
       width: 100%;
       height: 100%;
       z-index: 11;
+      pointer-events: none;
     }
   }
 
@@ -1008,6 +1009,157 @@
   }
 }
 
+.popup-ticket {
+  width: 664px;
+  height: 700px;
+  background-image: url(../assets/img/index/popup-ticket.png);
+  border-radius: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &__checkbox-wrap {
+    position: relative;
+  }
+
+  &__inner {
+    position: absolute;
+    z-index: 6;
+    width: 80%;
+    height: 100%;
+    right: 0;
+    background: var(--main-color);
+    border-radius: 0 28px 30px 0;
+    padding: 86px 64px;
+  }
+
+  &__title {
+    font-family: NeutralFace;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 56px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 125%;
+    color: #878886;
+    max-width: 281px;
+  }
+
+  &__header {
+    margin-bottom: 58px;
+  }
+
+  &__input {
+    border: 1px solid #878886;
+    border-radius: 4px;
+    background: #10110D;
+    width: 386px;
+    height: 44px;
+    outline: none;
+    padding: 12px 14px;
+    margin-bottom: 32px;
+
+    &-wrap {
+      position: relative;
+    }
+
+    &-wrap.has-danger {
+      .popup-ticket__input {
+        border: 1px solid #EA6143;
+      }
+    }
+
+  }
+
+  .privacy-policy__text,
+  .privacy-policy__link {
+    font-size: 14px;
+    line-height: 125%;
+    color: #878886;
+  }
+
+  .privacy-policy__link {
+    border-bottom: 1px solid #878886;
+  }
+
+  &__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__checkbox+label::after {
+    content: "";
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    border: 1px solid #878886;
+    border-radius: 2px;
+    display: flex;
+    order: -1;
+    margin-right: 12px;
+  }
+
+  &__checkbox:checked+label::after {
+    content: "";
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='11' viewBox='0 0 10 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.455078 6.47191L3.95158 9.5455L9.54599 0.45459' stroke='black'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background-color: var(--red-color);
+    border-color: var(--red-color);
+    display: flex;
+  }
+
+  &__box {
+    margin-bottom: 58px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    z-index: 7;
+    cursor: pointer;
+
+    svg.icon.close {
+      max-width: 22px;
+      max-height: 22px;
+    }
+  }
+
+  .pristine-error.text-help {
+    font-size: 12px;
+    line-height: 14px;
+    color: #EA6143;
+    margin-top: 4px;
+    position: absolute;
+    top: 45px;
+    left: 0;
+  }
+}
+
+
+
 @media screen and (max-width: 1349px) {
 
   .header {
@@ -1909,7 +2061,87 @@
     }
   }
 
+  .popup-ticket {
+    width: 300px;
+    height: 541px;
+    background-image: none;
+    border-radius: 20px;
 
+    &__inner {
+      width: inherit;
+      height: 100%;
+      border-radius: 20px;
+      padding: 60px 20px;
+    }
+
+    &__close {
+      right: 12px;
+      top: 12px;
+
+      svg.icon.close {
+        max-width: 16px;
+        max-height: 16px;
+      }
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 4px;
+    }
+
+    &__subtitle {
+      font-size: 12px;
+      line-height: 14px;
+      max-width: 244px;
+    }
+
+    &__header {
+      margin-bottom: 42px;
+    }
+
+    &__input {
+      border: 1px solid #878886;
+      border-radius: 4px;
+      background: #10110D;
+      width: 100%;
+      height: 38px;
+      outline: none;
+      padding: 10px 8px;
+      margin-bottom: 25px;
+    }
+
+    & .privacy-policy__text,
+    & .privacy-policy__link {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    &__box {
+      margin-bottom: 42px;
+    }
+
+    .btn.red-btn {
+      width: 100%;
+      height: 39px;
+      padding: 0;
+    }
+
+    .pristine-error.text-help {
+      font-size: 10px;
+      margin-top: 0;
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+
+    &__checkbox-wrap {
+      .pristine-error.text-help {
+        top: 45px;
+      }
+    }
+
+  }
 
 }
 
@@ -2072,6 +2304,5 @@
       }
     }
   }
-
 
 }
