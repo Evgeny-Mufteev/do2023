@@ -46,10 +46,27 @@
     <rect width="28.6418" height="2.47077" transform="matrix(-0.707109 -0.707105 -0.707109 0.707105 22 20.2527)" fill="#EEEAEA"/>
  </symbol>
 
+  <!-- Шеврон вверх  -->
+  <symbol id="chevron-up" viewBox="0 0 18 18">
+  <g clip-path="url(#clip0_363_453)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.53243 6.46162C2.15586 6.82712 2.15586 7.41971 2.53243 7.78521L9 14.0625L15.4676 7.78521C15.8441 7.41971 15.8441 6.82712 15.4676 6.46162C15.091 6.09613 14.4804 6.09613 14.1039 6.46162L9 11.4153L3.89614 6.46162C3.51956 6.09613 2.90901 6.09613 2.53243 6.46162Z" fill="#878886"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_363_453">
+      <rect width="13.5" height="13.5" fill="white" transform="translate(2.25 2.25)"/>
+    </clipPath>
+  </defs>
+ </symbol>
+
+   <!-- скролл вверх  -->
+  <symbol id="scroll-up" viewBox="0 0 14 17">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0L14 6.88423L13.0274 7.89781L7.6979 2.65642V17H6.3021V2.65642L0.972571 7.89781L0 6.88423L7 0Z" fill="#878886"/>
+ </symbol>
 
 
-<!-- <svg class="icon close">
-        <use href="./assets/svg/sprite.svg#close"></use>
+
+<!-- <svg class="icon scroll-up">
+        <use href="./assets/svg/sprite.svg#scroll-up"></use>
     </svg> -->
 
 </svg>

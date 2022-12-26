@@ -63,11 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // модальные окна
-  const handleModalBuyTicket = (btn, blockModal) => {
+  const handleModalBuyTicket = (btn, blockModal, blockForm) => {
     const btns = document.querySelectorAll(btn);
     const modal = document.querySelector(blockModal);
+    const form = document.querySelector(blockForm);
     const overlay = document.querySelector(".overlay");
-    const closeButton = document.querySelector(".js-close");
+    const arrCloseButton = document.querySelectorAll(".js-close");
 
     btns.forEach((btnItem) => {
       btnItem.addEventListener("click", (evt) => {
@@ -77,18 +78,23 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add("no-scroll");
       });
     });
+    arrCloseButton.forEach((closeButton) => {
+      closeButton.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        modal.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+        form?.reset();
+      });
+    });
     overlay.addEventListener("click", (evt) => {
       evt.preventDefault();
       modal.classList.remove("active");
       overlay.classList.remove("active");
       document.body.classList.remove("no-scroll");
+      form?.reset();
     });
-    closeButton.addEventListener("click", (evt) => {
-      evt.preventDefault();
-      modal.classList.remove("active");
-      overlay.classList.remove("active");
-      document.body.classList.remove("no-scroll");
-    });
+
     if (window.screen.width > 767) {
       document.addEventListener("keydown", (evt) => {
         if (evt.key === "Escape") {
@@ -96,11 +102,13 @@ document.addEventListener("DOMContentLoaded", () => {
           modal.classList.remove("active");
           overlay.classList.remove("active");
           document.body.classList.remove("no-scroll");
+          form?.reset();
         }
       });
     }
   };
-  handleModalBuyTicket(".js-buy-ticket", ".js-modal-ticket");
+  handleModalBuyTicket(".js-buy-ticket", ".js-modal-ticket", 'form[name="form-ticket"]');
+  handleModalBuyTicket(".js-buy-partner", ".js-modal-partner", 'form[name="form-partner"]');
 
   // Маска телефона
   const handlePhoneMask = (input) => {
@@ -121,21 +129,79 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Валидация и отправка формы
-  const formSubmission = () => {
-    const form = document.querySelector('form[name="form-ticket"]');
+  const handleFormSubmit = (formItem, popup) => {
+    const form = document.querySelector(formItem);
     const pristine = new Pristine(form);
+    const modalBlock = document.querySelector(popup);
 
     form.addEventListener("submit", (evt) => {
       evt.preventDefault();
       const valid = pristine.validate();
-      if (valid == true) {
-        evt.target.submit();
-        form.reset();
+      if (valid) {
+        evt.preventDefault();
+        modalBlock.classList.add("sucsess");
+        const formData = Object.fromEntries(new FormData(evt.target).entries());
+        formData.phone = formData.phone.replace(/\D/g, "");
+        delete formData["privacy-policy"];
+
+        setTimeout(() => {
+          evt.target.submit();
+          form.reset();
+          console.log(formData);
+        }, 3000);
       }
     });
   };
+  handleFormSubmit('form[name="form-ticket"]', ".js-modal-ticket");
+  handleFormSubmit('form[name="form-partner"]', ".js-modal-partner");
 
-  formSubmission();
+  // Передатать id выбранного билета в форму
+  const sendIdToForm = (el) => {
+    el = el.target;
+    if (el.closest(".js-buy-ticket")) {
+      document.querySelector(".js-select-tickets").value = el.closest(".tickets__item").id;
+    }
+  };
+  const blockForm = document.querySelector(".tickets__item-wrap");
+  blockForm.addEventListener("click", sendIdToForm);
+
+  // Выбор пунков партнерства в форме
+  if (document.querySelector(".js-sort-box")) {
+    const handleParameterSelection = (el) => {
+      el = el.target;
+
+      // Открытие списка
+      if (el.closest(".js-sort-btn")) {
+        el.closest(".js-sort-btn").classList.toggle("active");
+      }
+
+      // Удаление активного выбранного пункта из списка
+      if (el.closest(".js-sort-list")) {
+        const allEl = el.closest(".js-sort-list").querySelectorAll(".js-sort-item");
+        allEl.forEach((listItem) => {
+          listItem.classList.remove("active");
+        });
+      }
+
+      // Подстановка выбранного пункта
+      if (el.classList.contains("js-sort-item")) {
+        el.classList.add("active");
+        el.closest(".js-sort-box").querySelector(".selecting-item").value = el.textContent;
+        el.closest(".js-sort-box")
+          .querySelector(".selecting-item")
+          .setAttribute("value", el.textContent);
+        document.querySelector(".selecting-item").dispatchEvent(new Event("input"));
+      }
+
+      // Закрытие списка
+      if (!el.closest(".js-sort-btn")) {
+        document.querySelectorAll(".js-sort-btn").forEach((el) => {
+          el.classList.remove("active");
+        });
+      }
+    };
+    document.addEventListener("click", handleParameterSelection);
+  }
 
   // Слайдер Фотогалерея
   const photogallerySlider = new Swiper(".photogallery__block", {
@@ -156,5 +222,35 @@ document.addEventListener("DOMContentLoaded", () => {
     autoplay: {
       delay: false,
     },
+  });
+
+  // Якорь наверх
+  const toper = () => {
+    function scrollTo(element) {
+      window.scroll({
+        left: 0,
+        top: element.offsetTop,
+        behavior: "smooth",
+      });
+    }
+
+    let button = document.querySelector(".toTop");
+    let header = document.querySelector(".header");
+
+    button.addEventListener("click", () => {
+      scrollTo(header);
+    });
+  };
+
+  toper();
+
+  window.addEventListener("scroll", () => {
+    const topArrow = document.querySelector(".toTop");
+
+    if (window.pageYOffset > 1200) {
+      topArrow.classList.add("_show");
+    } else {
+      topArrow.classList.remove("_show");
+    }
   });
 });

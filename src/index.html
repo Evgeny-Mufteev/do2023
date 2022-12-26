@@ -44,7 +44,7 @@
             </p>
           </div>
           <div class="header__holder">
-            <a href="#premium" class="header__link js-scroll-to">стать партнёром</a>
+            <a href="javascript:void(0);" class="header__link js-buy-partner">стать партнёром</a>
             <a href="#tickets" class="header__link js-scroll-to">Купить билет</a>
             <a href="#premium" class="header__link js-scroll-to">Премия</a>
           </div>
@@ -455,7 +455,7 @@
           </div>
         </section>
 
-        <section class="speakers" id="speakers">
+        <section class="speakers">
           <div class="speakers__header">
             <h2 class="speakers__header-title">Спикеры конференции</h2>
             <div class="speakers__header-btns">
@@ -816,12 +816,12 @@
       <div class="container">
         <div class="footer__info">
           <div class="footer__info-social">
-            <a href="javascript:void(0);">
+            <a href="https://vk.com/digitalottepel" target="_blank">
               <svg class="icon icon-vk">
                 <use href="./assets/svg/sprite.svg#icon-vk"></use>
               </svg>
             </a>
-            <a href="javascript:void(0);">
+            <a href="https://t.me/digitalottepel" target="_blank">
               <svg class="icon icon-tg">
                 <use href="./assets/svg/sprite.svg#icon-tg"></use>
               </svg>
@@ -836,8 +836,9 @@
         </div>
         <div class="footer__copyright">
           <a class="footer__copyright-link">© Все права защищены</a>
-          <a href="javascript:void(0);" class="footer__copyright-link" target="_blank">Политика конфиденциальности</a>
-          <a href="javascript:void(0);" class="footer__copyright-link" target="_blank">Разработано в R-Top</a>
+          <a href="./assets/plugins/confidential_2023.pdf" class="footer__copyright-link" target="_blank">
+            Политика конфиденциальности</a>
+          <a href="https://r-top.ru/" class="footer__copyright-link" target="_blank">Разработано в R-Top</a>
         </div>
       </div>
     </footer>
@@ -846,6 +847,10 @@
 
 
   <div class="popup-ticket js-modal-ticket">
+    <div class="popup-modal">
+      <div class="popup-modal__title">Успешно!</div>
+      <div class="popup-modal__subtitle">Сейчас вы будете перенаправлены на оплату</div>
+    </div>
     <div class="popup-ticket__inner">
       <div class="popup-ticket__block">
         <div class="popup-ticket__header">
@@ -857,17 +862,17 @@
           <div class="popup-ticket__box">
             <div class="popup-ticket__input-wrap form-group">
               <input type="text" class="popup-ticket__input form-control" placeholder="ФИО" required
-                data-pristine-required-message="необходимо заполнить поле">
+                data-pristine-required-message="необходимо заполнить поле" name="full-name">
             </div>
 
             <div class="popup-ticket__input-wrap form-group">
               <input type="email" class="popup-ticket__input form-control" placeholder="Email*" required
-                data-pristine-required-message="необходимо заполнить поле">
+                data-pristine-required-message="необходимо заполнить поле" name="email">
             </div>
 
             <div class="popup-ticket__input-wrap form-group">
-              <input type="tel" class="popup-ticket__input form-control" placeholder="Номер телефона*" required
-                data-pristine-required-message="необходимо заполнить поле" minlength="18">
+              <input type="tel" class="popup-ticket__input form-control js-phone" placeholder="Номер телефона*" required
+                data-pristine-required-message="необходимо заполнить поле" minlength="18" name="phone">
             </div>
 
             <div class="popup-ticket__checkbox-wrap form-group">
@@ -876,14 +881,14 @@
               <label for="privacy-policy">
                 <p class="privacy-policy__text">
                   Я согласен на обработку персональных данных и ознакомился с
-                  <a href="javascript:void(0);" class="privacy-policy__link" target="_blank"> политикой
-                    конфиденциальности</a>
+                  <a href="./assets/plugins/confidential_2023.pdf" class="privacy-policy__link" target="_blank">
+                    политикой конфиденциальности</a>
                 </p>
               </label>
             </div>
           </div>
           <button type="submit" class="btn red-btn">Перейти к оплате</button>
-          <input type="hidden" class="js-select-tickets">
+          <input type="hidden" class="js-select-tickets" name="select-tickets">
         </form>
       </div>
     </div>
@@ -894,6 +899,82 @@
     </div>
   </div>
 
+  <div class="popup-ticket _modified js-modal-partner">
+    <div class="popup-modal">
+      <div class="popup-modal__title">Успешно!</div>
+      <div class="popup-modal__subtitle">Сейчас вы будете перенаправлены на оплату</div>
+    </div>
+    <div class="popup-ticket__inner">
+      <div class="popup-ticket__block">
+        <div class="popup-ticket__header">
+          <h4 class="popup-ticket__title">Стать партнёром</h4>
+        </div>
+        <form action="#0" class="form-ticket js-form" novalidate method="get" name="form-partner">
+
+          <div class="popup-ticket__box">
+            <div class="popup-ticket__input-wrap form-group">
+              <input type="text" class="popup-ticket__input form-control" placeholder="ФИО" name="full-name">
+            </div>
+
+            <div class="popup-ticket__input-wrap form-group">
+              <input type="text" class="popup-ticket__input form-control" placeholder="Компания*" required
+                data-pristine-required-message="необходимо заполнить поле" name="company">
+            </div>
+
+            <div class="popup-ticket__input-wrap form-group js-sort-box">
+              <input type="text" class="popup-ticket__input selecting-item js-sort-btn form-control"
+                placeholder="Тип партнёрства*" readonly required name="selected-item"
+                data-pristine-required-message="необходимо заполнить поле">
+              <svg class="icon chevron-up">
+                <use href="./assets/svg/sprite.svg#chevron-up"></use>
+              </svg>
+              <ul class="popup-ticket__list js-sort-list">
+                <li class="popup-ticket__item js-sort-item">Информационный партнёр</li>
+                <li class="popup-ticket__item js-sort-item">Технический партнёр</li>
+                <li class="popup-ticket__item js-sort-item">Финансовый партнёр</li>
+                <li class="popup-ticket__item js-sort-item">СМИ</li>
+              </ul>
+            </div>
+
+
+            <div class="popup-ticket__input-wrap form-group">
+              <input type="email" class="popup-ticket__input form-control" placeholder="Email" name="email">
+            </div>
+
+            <div class="popup-ticket__input-wrap form-group">
+              <input type="tel" class="popup-ticket__input form-control js-phone" placeholder="Номер телефона*" required
+                data-pristine-required-message="необходимо заполнить поле" minlength="18" name="phone">
+            </div>
+
+            <div class="popup-ticket__checkbox-wrap form-group">
+              <input type="checkbox" class="popup-ticket__checkbox form-control" id="privacy-policy2"
+                name="privacy-policy" required data-pristine-required-message="необходимо заполнить поле">
+              <label for="privacy-policy2">
+                <p class="privacy-policy__text">
+                  Я согласен на обработку персональных данных и ознакомился с
+                  <a href="./assets/plugins/confidential_2023.pdf" class="privacy-policy__link" target="_blank">
+                    политикой
+                    конфиденциальности</a>
+                </p>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn red-btn">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup-ticket__close js-close">
+      <svg class="icon close">
+        <use href="./assets/svg/sprite.svg#close"></use>
+      </svg>
+    </div>
+  </div>
+
+  </div>
+  <div class="toTop">
+    <svg class="icon scroll-up">
+      <use href="./assets/svg/sprite.svg#scroll-up"></use>
+    </svg>
   </div>
   <script src="assets/plugins/swiper/swiper-bundle.min.js"></script>
   <script src="assets/plugins/pristine/pristine.min.js"></script>
