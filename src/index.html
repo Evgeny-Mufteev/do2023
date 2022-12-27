@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Главная</title>
   <meta name="description" content="Нижегородская ярмарка">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="icon" href="assets/img/favicon.png">
   <meta property="og:image" content="images/distpromo_img">
 
@@ -58,7 +58,7 @@
         <nav class="header-nav-menu">
           <ul class="header-nav-list">
             <li class="header-nav-item">
-              <a class="header-nav-link" href="javascript:void(0);">Премия</a>
+              <a class="header-nav-link" href="award.html">Премия</a>
             </li>
             <li class="header-nav-item">
               <a class="header-nav-link" href="javascript:void(0);">Программма</a>
@@ -350,8 +350,8 @@
 
         <section class="premium" id="premium">
           <div class="premium__header">
-            <div class="premium__header-title">независимая премия среди <nobr>it-компаний</nobr>
-            </div>
+            <h2 class="premium__header-title">независимая премия среди <span>it-компаний</span>
+            </h2>
             <div class="premium__header-text">
               Премия рассчитана на региональные digital-агентства, которым есть что показать и чем поделиться. Будем
               рады видеть в числе участников коллег из Нижнего Новгорода, Казани, Кирова, Пензы, Владимира, других
@@ -460,7 +460,7 @@
             <h2 class="speakers__header-title">Спикеры конференции</h2>
             <div class="speakers__header-btns">
               <button class="btn black-btn">Смотреть всех спикеров</button>
-              <button class="btn red-btn">хочу стать спикером</button>
+              <button class="btn red-btn js-buy-speaker">хочу стать спикером</button>
             </div>
           </div>
 
@@ -608,7 +608,7 @@
 
       <div class="container">
         <section class="partners">
-          <div class="partners__title">Партнёры</div>
+          <h2 class="partners__title">Партнёры</h2>
           <div class="partners__block">
 
             <div class="partners__block-item">
@@ -699,7 +699,7 @@
         </section>
 
         <section class="info-partners">
-          <div class="info-partners__title">информационные партнёры</div>
+          <h2 class="info-partners__title">информационные партнёры</h2>
 
           <div class="info-partners__block">
 
@@ -857,7 +857,7 @@
           <h4 class="popup-ticket__title">Купить билет</h4>
           <p class="popup-ticket__subtitle">Перед оплатой необходимо оставить свои актуальные контактные данные</p>
         </div>
-        <form action="#0" class="form-ticket js-form" novalidate method="get" name="form-ticket">
+        <form action="#1" class="form-ticket js-form" novalidate method="get" name="form-ticket">
 
           <div class="popup-ticket__box">
             <div class="popup-ticket__input-wrap form-group">
@@ -879,11 +879,11 @@
               <input type="checkbox" class="popup-ticket__checkbox form-control" id="privacy-policy"
                 name="privacy-policy" required data-pristine-required-message="необходимо заполнить поле">
               <label for="privacy-policy">
-                <p class="privacy-policy__text">
+                <span class="privacy-policy__text">
                   Я согласен на обработку персональных данных и ознакомился с
                   <a href="./assets/plugins/confidential_2023.pdf" class="privacy-policy__link" target="_blank">
                     политикой конфиденциальности</a>
-                </p>
+                </span>
               </label>
             </div>
           </div>
@@ -902,14 +902,14 @@
   <div class="popup-ticket _modified js-modal-partner">
     <div class="popup-modal">
       <div class="popup-modal__title">Успешно!</div>
-      <div class="popup-modal__subtitle">Сейчас вы будете перенаправлены на оплату</div>
+      <div class="popup-modal__subtitle">Мы свяжемся с вами в ближайшее время</div>
     </div>
     <div class="popup-ticket__inner">
       <div class="popup-ticket__block">
         <div class="popup-ticket__header">
           <h4 class="popup-ticket__title">Стать партнёром</h4>
         </div>
-        <form action="#0" class="form-ticket js-form" novalidate method="get" name="form-partner">
+        <form action="#2" class="form-ticket js-form" novalidate method="get" name="form-partner">
 
           <div class="popup-ticket__box">
             <div class="popup-ticket__input-wrap form-group">
@@ -950,12 +950,12 @@
               <input type="checkbox" class="popup-ticket__checkbox form-control" id="privacy-policy2"
                 name="privacy-policy" required data-pristine-required-message="необходимо заполнить поле">
               <label for="privacy-policy2">
-                <p class="privacy-policy__text">
+                <span class="privacy-policy__text">
                   Я согласен на обработку персональных данных и ознакомился с
                   <a href="./assets/plugins/confidential_2023.pdf" class="privacy-policy__link" target="_blank">
                     политикой
                     конфиденциальности</a>
-                </p>
+                </span>
               </label>
             </div>
           </div>
@@ -970,7 +970,83 @@
     </div>
   </div>
 
+  <div class="popup-ticket _modified js-modal-speaker">
+    <div class="popup-modal">
+      <div class="popup-modal__title">Успешно!</div>
+      <div class="popup-modal__subtitle">Мы свяжемся с вами в ближайшее время</div>
+    </div>
+    <div class="popup-ticket__inner">
+      <div class="popup-ticket__block">
+        <div class="popup-ticket__header">
+          <h4 class="popup-ticket__title">Стать спикером</h4>
+        </div>
+        <form action="#3" class="form-ticket js-form" novalidate method="get" name="form-speaker">
+
+          <div class="popup-ticket__box">
+            <div class="popup-ticket__input-wrap form-group">
+              <input type="text" class="popup-ticket__input form-control" placeholder="ФИО спикера*" required
+                data-pristine-required-message="необходимо заполнить поле" name="full-name">
+            </div>
+
+            <div class="popup-ticket__input-wrap form-group">
+              <input type="text" class="popup-ticket__input form-control" placeholder="Компания*" required
+                data-pristine-required-message="необходимо заполнить поле" name="company">
+            </div>
+
+            <div class="popup-ticket__input-wrap form-group js-sort-box">
+              <input type="text" class="popup-ticket__input selecting-item js-sort-btn form-control"
+                placeholder="Направление деятельности*" readonly required name="selected-item"
+                data-pristine-required-message="необходимо заполнить поле">
+              <svg class="icon chevron-up">
+                <use href="./assets/svg/sprite.svg#chevron-up"></use>
+              </svg>
+              <ul class="popup-ticket__list js-sort-list">
+                <li class="popup-ticket__item js-sort-item">seo</li>
+                <li class="popup-ticket__item js-sort-item">smm</li>
+                <li class="popup-ticket__item js-sort-item">дизайн</li>
+                <li class="popup-ticket__item js-sort-item">креатив</li>
+                <li class="popup-ticket__item js-sort-item">infuence marketing</li>
+                <li class="popup-ticket__item js-sort-item">продажи</li>
+                <li class="popup-ticket__item js-sort-item">управление проектами</li>
+                <li class="popup-ticket__item js-sort-item">реклама</li>
+                <li class="popup-ticket__item js-sort-item">другое</li>
+              </ul>
+            </div>
+
+
+            <div class="popup-ticket__input-wrap form-group">
+              <input type="email" class="popup-ticket__input form-control" placeholder="Email" name="email">
+            </div>
+
+            <div class="popup-ticket__input-wrap form-group">
+              <input type="tel" class="popup-ticket__input form-control js-phone" placeholder="Номер телефона*" required
+                data-pristine-required-message="необходимо заполнить поле" minlength="18" name="phone">
+            </div>
+
+            <div class="popup-ticket__checkbox-wrap form-group">
+              <input type="checkbox" class="popup-ticket__checkbox form-control" id="privacy-policy3"
+                name="privacy-policy" required data-pristine-required-message="необходимо заполнить поле">
+              <label for="privacy-policy3">
+                <span class="privacy-policy__text">
+                  Я согласен на обработку персональных данных и ознакомился с
+                  <a href="./assets/plugins/confidential_2023.pdf" class="privacy-policy__link" target="_blank">
+                    политикой
+                    конфиденциальности</a>
+                </span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn red-btn">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup-ticket__close js-close">
+      <svg class="icon close">
+        <use href="./assets/svg/sprite.svg#close"></use>
+      </svg>
+    </div>
   </div>
+
   <div class="toTop">
     <svg class="icon scroll-up">
       <use href="./assets/svg/sprite.svg#scroll-up"></use>

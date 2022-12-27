@@ -69,6 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(blockForm);
     const overlay = document.querySelector(".overlay");
     const arrCloseButton = document.querySelectorAll(".js-close");
+    const selectInput = document.querySelectorAll(".js-sort-btn");
+    console.log(selectInput);
 
     btns.forEach((btnItem) => {
       btnItem.addEventListener("click", (evt) => {
@@ -84,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.remove("active");
         overlay.classList.remove("active");
         document.body.classList.remove("no-scroll");
+        selectInput.forEach((el) => (el.value = ""));
         form?.reset();
       });
     });
@@ -92,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove("active");
       overlay.classList.remove("active");
       document.body.classList.remove("no-scroll");
+      selectInput.forEach((el) => (el.value = ""));
       form?.reset();
     });
 
@@ -109,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   handleModalBuyTicket(".js-buy-ticket", ".js-modal-ticket", 'form[name="form-ticket"]');
   handleModalBuyTicket(".js-buy-partner", ".js-modal-partner", 'form[name="form-partner"]');
+  handleModalBuyTicket(".js-buy-speaker", ".js-modal-speaker", 'form[name="form-speaker"]');
 
   // Маска телефона
   const handlePhoneMask = (input) => {
@@ -154,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   handleFormSubmit('form[name="form-ticket"]', ".js-modal-ticket");
   handleFormSubmit('form[name="form-partner"]', ".js-modal-partner");
+  handleFormSubmit('form[name="form-speaker"]', ".js-modal-speaker");
 
   // Передатать id выбранного билета в форму
   const sendIdToForm = (el) => {
@@ -206,16 +212,27 @@ document.addEventListener("DOMContentLoaded", () => {
   // Слайдер Фотогалерея
   const photogallerySlider = new Swiper(".photogallery__block", {
     loop: true,
-    slidesPerView: "auto",
     breakpoints: {
       319: {
         spaceBetween: 12,
+        slidesPerView: 1,
+      },
+      479: {
+        spaceBetween: 24,
+        slidesPerView: 1.3,
       },
       767: {
-        spaceBetween: 20,
+        slidesPerView: 2.1,
       },
       1023: {
-        spaceBetween: 32,
+        spaceBetween: 40,
+        slidesPerView: 1.9,
+      },
+      1349: {
+        slidesPerView: 2,
+      },
+      1800: {
+        slidesPerView: 2.6,
       },
     },
     speed: 15000,
