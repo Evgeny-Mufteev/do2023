@@ -1,0 +1,116 @@
+.header {
+  background-image: url(../assets/img/speakers/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__holder {
+    padding: 112px 0 220px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-color);
+    background: var(--red-color);
+    border-radius: 600px;
+    padding: 10px 20px 8px;
+    margin-top: 24px;
+  }
+}
+
+.speakers {
+  padding: 60px 0 80px;
+
+  &-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
+    grid-gap: 80px 32px;
+
+    &__img {
+      img {
+        width: 304px;
+        height: 304px;
+        max-height: 304px;
+      }
+    }
+
+    &__fulname {
+      max-width: 284px;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 28px;
+    }
+
+    &__name,
+    &__surname {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0 auto;
+      color: #FFFFFF;
+    }
+
+    &__desc {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 125%;
+      text-align: center;
+      color: #878886;
+      max-width: 284px;
+      margin-top: 12px;
+
+      -webkit-line-clamp: 4;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  &__btn {
+    border-radius: 600px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #10110D;
+    width: 216px;
+    height: 56px;
+    margin: 80px auto 0;
+    display: block;
+    outline: none;
+    transition: var(--base-transition);
+  }
+}
+
+@media screen and (max-width: 1349px) {
+  .speakers {
+
+    &-block {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+      grid-gap: 80px 20px;
+
+      &__img {
+        img {
+          width: 315px;
+          height: 315px;
+          max-height: 315px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {}
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (max-width: 479px) {}

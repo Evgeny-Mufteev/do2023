@@ -10,11 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const valid = pristine.validate();
       if (valid) {
         evt.preventDefault();
-
+        handlePopupOpeningClosing();
         const formData = Object.fromEntries(new FormData(evt.target).entries());
         formData.phone = formData.phone.replace(/\D/g, "");
         delete formData["privacy-policy"];
-        // console.log(formData);
         evt.target.submit();
         form.reset();
       }
@@ -22,6 +21,20 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   handleFormSubmit('form[name="form-award"]');
 
+  const handlePopupOpeningClosing = () => {
+    const modal = document.querySelector(".sucsess-popup");
+    const CLOSE_MODAL_DELAY = 5000;
+    modal.classList.add("active");
+    document.body.classList.add("no-scroll");
+    document.querySelector(".overlay").classList.add("active");
+    setTimeout(() => {
+      document.body.classList.remove("no-scroll");
+      document.querySelector(".overlay").classList.remove("active");
+      modal.classList.remove("active");
+    }, CLOSE_MODAL_DELAY);
+  };
+
+  // Добавление тире после каждых трех цифр
   const handleInputInn = () => {
     const input = document.querySelector(".js-inn");
 

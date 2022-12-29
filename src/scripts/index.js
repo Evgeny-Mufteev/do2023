@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // модальные окна
-  const handleModalBuyTicket = (btn, blockModal, blockForm) => {
+  const handleModalPopup = (btn, blockModal, blockForm) => {
     const btns = document.querySelectorAll(btn);
     const modal = document.querySelector(blockModal);
     const form = document.querySelector(blockForm);
@@ -114,9 +114,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   };
-  handleModalBuyTicket(".js-buy-ticket", ".js-modal-ticket", 'form[name="form-ticket"]');
-  handleModalBuyTicket(".js-buy-partner", ".js-modal-partner", 'form[name="form-partner"]');
-  handleModalBuyTicket(".js-buy-speaker", ".js-modal-speaker", 'form[name="form-speaker"]');
+  handleModalPopup(".js-buy-ticket", ".js-modal-ticket", 'form[name="form-ticket"]');
+  handleModalPopup(".js-buy-partner", ".js-modal-partner", 'form[name="form-partner"]');
+  handleModalPopup(".js-buy-speaker", ".js-modal-speaker", 'form[name="form-speaker"]');
 
   // Валидация и отправка формы
   const handleFormSubmit = (formItem, popup) => {
