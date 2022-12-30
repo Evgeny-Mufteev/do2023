@@ -16,55 +16,55 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
-      <div class="header__inner">
-        <div class="header__left">
-          <div class="header__hidden"></div>
-          <div class="header__title-wrap">
-            <h1 class="header__title">Digital-Оттепель</h1>
-            <span class="header__year">2023 y</span>
+    <header class="header-ind">
+      <div class="header-ind__inner">
+        <div class="header-ind__left">
+          <div class="header-ind__hidden"></div>
+          <div class="header-ind__title-wrap">
+            <h1 class="header-ind__title">Digital-Оттепель</h1>
+            <span class="header-ind__year">2023 y</span>
           </div>
-          <div class="header__organizers">
-            <div class="header__logo">
+          <div class="header-ind__organizers">
+            <div class="header-ind__logo">
               <svg class="icon logo-header">
                 <use href="./assets/svg/sprite.svg#logo-header"></use>
               </svg>
             </div>
-            <span class="header__tagline">— Организаторы конференции</span>
+            <span class="header-ind__tagline">— Организаторы конференции</span>
           </div>
         </div>
-        <div class="header__right">
-          <div class="header__holder">
-            <p class="header__text">
+        <div class="header-ind__right">
+          <div class="header-ind__holder">
+            <p class="header-ind__text">
               Крупнейшая ежегодная конференция в области маркетинга, рекламы и продвижения, коммуникации, брендов и
               современных технологий.
             </p>
-            <p class="header__text">
+            <p class="header-ind__text">
               Топовые спикеры, инсайты, нетворкинг, афтерпати, воркшопы, знакомства, креатив и мотивация.
             </p>
           </div>
-          <div class="header__holder">
-            <a href="javascript:void(0);" class="header__link js-buy-partner">стать партнёром</a>
-            <a href="#tickets" class="header__link js-scroll-to">Купить билет</a>
-            <a href="#premium" class="header__link js-scroll-to">Премия</a>
+          <div class="header-ind__holder">
+            <a href="javascript:void(0);" class="header-ind__link js-buy-partner">стать партнёром</a>
+            <a href="#tickets" class="header-ind__link js-scroll-to">Купить билет</a>
+            <a href="#premium" class="header-ind__link js-scroll-to">Премия</a>
           </div>
-          <div class="header__holder">
-            <p class="header__data">6-7 апреля</p>
-            <p class="header__adress">Нижний Новгород, ул. Академика Сахарова, 4, технопарк Анкудиновка</p>
+          <div class="header-ind__holder">
+            <p class="header-ind__data">6-7 апреля</p>
+            <p class="header-ind__adress">Нижний Новгород, ул. Академика Сахарова, 4, технопарк Анкудиновка</p>
           </div>
         </div>
       </div>
-      <div class="header-nav">
-        <nav class="header-nav-menu">
-          <ul class="header-nav-list">
-            <li class="header-nav-item">
-              <a class="header-nav-link" href="award.html">Премия</a>
+      <div class="header-ind-nav">
+        <nav class="header-ind-nav-menu">
+          <ul class="header-ind-nav-list">
+            <li class="header-ind-nav-item">
+              <a class="header-ind-nav-link" href="award.html">Премия</a>
             </li>
-            <li class="header-nav-item">
-              <a class="header-nav-link" href="javascript:void(0);">Программма</a>
+            <li class="header-ind-nav-item">
+              <a class="header-ind-nav-link" href="javascript:void(0);">Программма</a>
             </li>
-            <li class="header-nav-item">
-              <a class="header-nav-link" href="speakers.html">Спикеры</a>
+            <li class="header-ind-nav-item">
+              <a class="header-ind-nav-link" href="speakers.html">Спикеры</a>
             </li>
           </ul>
         </nav>
@@ -235,7 +235,8 @@
             </p>
           </div>
           <div class="workshops__item-wrap">
-            <div class="workshops__item">
+
+            <div class="workshops__item js-workshops-item">
               <div class="workshops__item-img">
                 <picture>
                   <source srcset="./assets/img/index/workshop1.webp" type="image/webp">
@@ -244,14 +245,30 @@
               </div>
               <div class="workshops__item-title">ВОРКШОП ОТ MARKETING DIVISION AGENCY</div>
               <div class="workshops__item-text">Как помочь командам продолжать эффективно креативить в это время</div>
-              <a href="javascript:void(0);" class="workshops__item-link">
+              <a href="javascript:void(0);" class="workshops__item-link js-workshop">
                 Читать подробнее
                 <svg class="icon right-arrow">
                   <use href="./assets/svg/sprite.svg#right-arrow"></use>
                 </svg>
               </a>
+
+              <div class="workshops__item-info">
+                111Блок информации об агентстве/спикере. Лидирующая группа маркетинговых коммуникаций в России,
+                предоставляющая широкий спектр компетенций в digtial, медиа, маркетинге, брендинге и PR. Нижний Новгород
+              </div>
+
+              <div class="workshops__item-box">
+                Для современного мира семантический разбор внешних противодействий не оставляет шанса для позиций,
+                занимаемых участниками в отношении поставленных задач. Имеется спорная точка зрения, гласящая примерно
+                следующее: независимые государства своевременно верифицированы.
+              </div>
+
+              <div class="workshops__item-name">Иван Иванов, генеральный директор </div>
+              <div class="workshops__item-name">Василий Петров, креативный директор </div>
+
             </div>
-            <div class="workshops__item">
+
+            <div class="workshops__item js-workshops-item">
               <div class="workshops__item-img">
                 <picture>
                   <source srcset="./assets/img/index/workshop2.webp" type="image/webp">
@@ -263,14 +280,28 @@
                 "Я считаю, что самый быстрый способ развить личный бренд - это начать заявлять о себе публично, через
                 выступления и социальные сети"
               </div>
-              <a href="javascript:void(0);" class="workshops__item-link">
+              <a href="javascript:void(0);" class="workshops__item-link js-workshop">
                 Читать подробнее
                 <svg class="icon right-arrow">
                   <use href="./assets/svg/sprite.svg#right-arrow"></use>
                 </svg>
               </a>
+              <div class="workshops__item-info">
+                222Блок информации об агентстве/спикере. Лидирующая группа маркетинговых коммуникаций в России,
+                предоставляющая широкий спектр компетенций в digtial, медиа, маркетинге, брендинге и PR. Нижний Новгород
+              </div>
+
+              <div class="workshops__item-box">
+                Для современного мира семантический разбор внешних противодействий не оставляет шанса для позиций,
+                занимаемых участниками в отношении поставленных задач. Имеется спорная точка зрения, гласящая примерно
+                следующее: независимые государства своевременно верифицированы.
+              </div>
+
+              <div class="workshops__item-name">Иван Иванов, генеральный директор </div>
+              <div class="workshops__item-name">Василий Петров, креативный директор </div>
             </div>
-            <div class="workshops__item">
+
+            <div class="workshops__item js-workshops-item">
               <div class="workshops__item-img">
                 <picture>
                   <source srcset="./assets/img/index/workshop3.webp" type="image/webp">
@@ -278,16 +309,32 @@
                 </picture>
               </div>
               <div class="workshops__item-title">ВОРКШОП ОТ SMM-АГЕНТСТВА DASHDASH</div>
-              <div class="workshops__item-text">Ребята из агентства - это взрывные идеи и вкусная реализация
-                SMM-стратегий: пишут очаровательные тексты и снимают милые плаксивые видосики</div>
-              <a href="javascript:void(0);" class="workshops__item-link">
+              <div class="workshops__item-text">
+                Ребята из агентства - это взрывные идеи и вкусная реализация
+                SMM-стратегий: пишут очаровательные тексты и снимают милые плаксивые видосики
+              </div>
+              <a href="javascript:void(0);" class="workshops__item-link js-workshop">
                 Читать подробнее
                 <svg class="icon right-arrow">
                   <use href="./assets/svg/sprite.svg#right-arrow"></use>
                 </svg>
               </a>
+              <div class="workshops__item-info">
+                333Блок информации об агентстве/спикере. Лидирующая группа маркетинговых коммуникаций в России,
+                предоставляющая широкий спектр компетенций в digtial, медиа, маркетинге, брендинге и PR. Нижний Новгород
+              </div>
+
+              <div class="workshops__item-box">
+                Для современного мира семантический разбор внешних противодействий не оставляет шанса для позиций,
+                занимаемых участниками в отношении поставленных задач. Имеется спорная точка зрения, гласящая примерно
+                следующее: независимые государства своевременно верифицированы.
+              </div>
+
+              <div class="workshops__item-name">Иван Иванов, генеральный директор </div>
+              <div class="workshops__item-name">Василий Петров, креативный директор </div>
             </div>
-            <div class="workshops__item">
+
+            <div class="workshops__item js-workshops-item">
               <div class="workshops__item-img">
                 <picture>
                   <source srcset="./assets/img/index/workshop4.webp" type="image/webp">
@@ -299,14 +346,28 @@
                 Наставник экспертов и блогеров. Миллионер и практик.После работы со мной люди выходят на x2 уровень
                 дохода и жизни, за счет личного бренда, мышления и навыка продаж и прогревов.
               </div>
-              <a href="javascript:void(0);" class="workshops__item-link">
+              <a href="javascript:void(0);" class="workshops__item-link js-workshop">
                 Читать подробнее
                 <svg class="icon right-arrow">
                   <use href="./assets/svg/sprite.svg#right-arrow"></use>
                 </svg>
               </a>
+              <div class="workshops__item-info">
+                444Блок информации об агентстве/спикере. Лидирующая группа маркетинговых коммуникаций в России,
+                предоставляющая широкий спектр компетенций в digtial, медиа, маркетинге, брендинге и PR. Нижний Новгород
+              </div>
+
+              <div class="workshops__item-box">
+                Для современного мира семантический разбор внешних противодействий не оставляет шанса для позиций,
+                занимаемых участниками в отношении поставленных задач. Имеется спорная точка зрения, гласящая примерно
+                следующее: независимые государства своевременно верифицированы.
+              </div>
+
+              <div class="workshops__item-name">Иван Иванов, генеральный директор </div>
+              <div class="workshops__item-name">Василий Петров, креативный директор </div>
             </div>
-            <div class="workshops__item">
+
+            <div class="workshops__item js-workshops-item">
               <div class="workshops__item-img">
                 <picture>
                   <source srcset="./assets/img/index/workshop5.webp" type="image/webp">
@@ -319,14 +380,28 @@
                 всех агентств, отправивших заявки, одно получит шанс бесплатно прокачать свой бизнес на 360 градусов с
                 опытным ментором.
               </div>
-              <a href="javascript:void(0);" class="workshops__item-link">
+              <a href="javascript:void(0);" class="workshops__item-link js-workshop">
                 Читать подробнее
                 <svg class="icon right-arrow">
                   <use href="./assets/svg/sprite.svg#right-arrow"></use>
                 </svg>
               </a>
+              <div class="workshops__item-info">
+                555Блок информации об агентстве/спикере. Лидирующая группа маркетинговых коммуникаций в России,
+                предоставляющая широкий спектр компетенций в digtial, медиа, маркетинге, брендинге и PR. Нижний Новгород
+              </div>
+
+              <div class="workshops__item-box">
+                Для современного мира семантический разбор внешних противодействий не оставляет шанса для позиций,
+                занимаемых участниками в отношении поставленных задач. Имеется спорная точка зрения, гласящая примерно
+                следующее: независимые государства своевременно верифицированы.
+              </div>
+
+              <div class="workshops__item-name">Иван Иванов, генеральный директор </div>
+              <div class="workshops__item-name">Василий Петров, креативный директор </div>
             </div>
-            <div class="workshops__item">
+
+            <div class="workshops__item js-workshops-item">
               <div class="workshops__item-img">
                 <picture>
                   <source srcset="./assets/img/index/workshop6.webp" type="image/webp">
@@ -338,13 +413,27 @@
                 Мастермайнд от Рассвета — это коллективный брейншторм. Это комбинация пользы и общения, обучения в
                 действии и способа постановки личных целей и преодоления кризиса идей.
               </div>
-              <a href="javascript:void(0);" class="workshops__item-link">
+              <a href="javascript:void(0);" class="workshops__item-link js-workshop">
                 Читать подробнее
                 <svg class="icon right-arrow">
                   <use href="./assets/svg/sprite.svg#right-arrow"></use>
                 </svg>
               </a>
+              <div class="workshops__item-info">
+                666Блок информации об агентстве/спикере. Лидирующая группа маркетинговых коммуникаций в России,
+                предоставляющая широкий спектр компетенций в digtial, медиа, маркетинге, брендинге и PR. Нижний Новгород
+              </div>
+
+              <div class="workshops__item-box">
+                Для современного мира семантический разбор внешних противодействий не оставляет шанса для позиций,
+                занимаемых участниками в отношении поставленных задач. Имеется спорная точка зрения, гласящая примерно
+                следующее: независимые государства своевременно верифицированы.
+              </div>
+
+              <div class="workshops__item-name">Иван Иванов, генеральный директор </div>
+              <div class="workshops__item-name">Василий Петров, креативный директор </div>
             </div>
+
           </div>
         </section>
 
@@ -1044,6 +1133,35 @@
       <svg class="icon close">
         <use href="./assets/svg/sprite.svg#close"></use>
       </svg>
+    </div>
+  </div>
+
+  <div class="popup-workshop js-modal-workshop">
+    <div class="popup-workshop__block">
+      <div class="popup-workshop__inner">
+
+        <div class="popup-workshop__box">
+          <div class="popup-workshop__title"></div>
+          <div class="popup-workshop__info"></div>
+        </div>
+
+        <div class="popup-workshop__box">
+          <div class="popup-workshop__subtitle">О воркшопе:</div>
+          <div class="popup-workshop__desc"></div>
+        </div>
+
+        <div class="popup-workshop__box">
+          <div class="popup-workshop__subtitle">Спикеры:</div>
+          <div class="popup-workshop__name"></div>
+          <div class="popup-workshop__name"></div>
+        </div>
+
+      </div>
+      <div class="popup-workshop__close js-close">
+        <svg class="icon close">
+          <use href="./assets/svg/sprite.svg#close"></use>
+        </svg>
+      </div>
     </div>
   </div>
 

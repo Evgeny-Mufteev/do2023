@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add("no-scroll");
       });
     });
+
     arrCloseButton.forEach((closeButton) => {
       closeButton.addEventListener("click", (evt) => {
         evt.preventDefault();
@@ -91,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     });
+
     overlay.addEventListener("click", (evt) => {
       evt.preventDefault();
       modal.classList.remove("active");
@@ -117,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
   handleModalPopup(".js-buy-ticket", ".js-modal-ticket", 'form[name="form-ticket"]');
   handleModalPopup(".js-buy-partner", ".js-modal-partner", 'form[name="form-partner"]');
   handleModalPopup(".js-buy-speaker", ".js-modal-speaker", 'form[name="form-speaker"]');
+  handleModalPopup(".js-workshop", ".js-modal-workshop");
 
   // Валидация и отправка формы
   const handleFormSubmit = (formItem, popup) => {
@@ -155,6 +158,41 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   const blockForm = document.querySelector(".tickets__item-wrap");
   blockForm.addEventListener("click", sendIdToForm);
+
+  // Копирование данных и передача в попап
+  const handleCopyTransferPopup = () => {
+    const btns = document.querySelectorAll(".js-workshop");
+
+    btns.forEach((el) => {
+      el.addEventListener("click", (evt) => {
+        if (el.closest(".js-workshops-item")) {
+          const workshopItem = el.closest(".js-workshops-item"),
+            popupWorkshop = document.querySelector(".js-modal-workshop"),
+            titleNewNode = workshopItem.querySelector(".workshops__item-title").cloneNode(true),
+            popupTitle = popupWorkshop.querySelector(".popup-workshop__title"),
+            infoNewNode = workshopItem.querySelector(".workshops__item-info").cloneNode(true),
+            popupInfo = popupWorkshop.querySelector(".popup-workshop__info"),
+            descNewNode = workshopItem.querySelector(".workshops__item-box").cloneNode(true),
+            popupDesc = popupWorkshop.querySelector(".popup-workshop__desc"),
+            speakersNewNode = workshopItem.querySelector(".workshops__item-name").cloneNode(true),
+            popupSpeakers = popupWorkshop.querySelector(".popup-workshop__name");
+
+          while (popupTitle.firstChild) {
+            popupTitle.removeChild(popupTitle.lastChild);
+            popupInfo.removeChild(popupInfo.lastChild);
+            popupDesc.removeChild(descNewNode.lastChild);
+            popupSpeakers.removeChild(popupSpeakers.lastChild);
+          }
+
+          popupTitle.appendChild(titleNewNode);
+          popupInfo.appendChild(infoNewNode);
+          popupDesc.appendChild(descNewNode);
+          popupSpeakers.appendChild(speakersNewNode);
+        }
+      });
+    });
+  };
+  handleCopyTransferPopup();
 
   // Слайдер Фотогалерея
   const photogallerySlider = new Swiper(".photogallery__block", {
