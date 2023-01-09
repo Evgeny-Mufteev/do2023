@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   handlePageNavigation();
 
   // Таймер JS
+  var warrior;
   const calculationsTimer = (endToTime, wrap) => {
     const dateEnd = new Date(endToTime),
       dateNow = new Date(),
@@ -26,40 +27,57 @@ document.addEventListener("DOMContentLoaded", () => {
       hours = wrap.querySelector(".timer__hours .timer__number"),
       minutes = wrap.querySelector(".timer__minutes .timer__number"),
       seconds = wrap.querySelector(".timer__seconds .timer__number");
-
-    countdown(date, days, hours, minutes, seconds);
+    //countdown(date, days, hours, minutes, seconds);
+    if (date > 0) {
+      warrior = setTimeout(() => countdown(date, days, hours, minutes, seconds), 1000);
+    }
   };
 
   const countdown = (date, days, hours, minutes, seconds) => {
     let dateLeft = date;
     let dateTemp = 0;
 
-    dateTemp = Math.floor(dateLeft / (24 * 60 * 60));
-    days.innerHTML = dateTemp;
-    dateLeft -= dateTemp * 24 * 60 * 60;
+    const TimeValues = {
+      Vdays: {
+        count: 24 * 60 * 60,
+        item: days,
+      },
+      Vhours: {
+        count: 60 * 60,
+        item: hours,
+      },
+      Vminutes: {
+        count: 60,
+        item: minutes,
+      },
+      Vseconds: {
+        count: null,
+        item: seconds,
+      },
+    };
 
-    if (dateTemp < 10) dateTemp = "0" + dateTemp;
-
-    dateTemp = Math.floor(dateLeft / (60 * 60));
-    dateLeft -= dateTemp * 60 * 60;
-    if (dateTemp < 10) dateTemp = "0" + dateTemp;
-    hours.innerHTML = dateTemp;
-
-    dateTemp = Math.floor(dateLeft / 60);
-    dateLeft -= dateTemp * 60;
-    if (dateTemp < 10) dateTemp = "0" + dateTemp;
-    minutes.innerHTML = dateTemp;
-
-    if (dateLeft < 10) dateLeft = "0" + dateLeft;
-    seconds.innerHTML = dateLeft;
-
+    for (let val in TimeValues) {
+      dateTemp = Math.floor(dateLeft / TimeValues[val].count);
+      if (val != "Vseconds") {
+        dateLeft -= dateTemp * TimeValues[val].count;
+        if (dateTemp < 10) dateTemp = "0" + dateTemp;
+        TimeValues[val].item.innerHTML = dateTemp;
+      } else {
+        if (dateLeft < 10) dateLeft = "0" + dateLeft;
+        TimeValues[val].item.innerHTML = dateLeft;
+      }
+    }
     date--;
 
-    setTimeout(() => countdown(date, days, hours, minutes, seconds), 1000);
+    if (date < 0) {
+      clearTimeout(warrior);
+    } else {
+      setTimeout(() => countdown(date, days, hours, minutes, seconds), 1000);
+    }
   };
 
   document.querySelectorAll(".timer").forEach((el) => {
-    calculationsTimer("2023-02-18 18:00:00".replace(/-/g, "/"), el);
+    calculationsTimer("2023-03-09 19:41:00".replace(/-/g, "/"), el);
   });
 
   // модальные окна
@@ -164,31 +182,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const btns = document.querySelectorAll(".js-workshop");
 
     btns.forEach((el) => {
-      el.addEventListener("click", (evt) => {
-        if (el.closest(".js-workshops-item")) {
-          const workshopItem = el.closest(".js-workshops-item"),
-            popupWorkshop = document.querySelector(".js-modal-workshop"),
-            titleNewNode = workshopItem.querySelector(".workshops__item-title").cloneNode(true),
-            popupTitle = popupWorkshop.querySelector(".popup-workshop__title"),
-            infoNewNode = workshopItem.querySelector(".workshops__item-info").cloneNode(true),
-            popupInfo = popupWorkshop.querySelector(".popup-workshop__info"),
-            descNewNode = workshopItem.querySelector(".workshops__item-box").cloneNode(true),
-            popupDesc = popupWorkshop.querySelector(".popup-workshop__desc"),
-            speakersNewNode = workshopItem.querySelector(".workshops__item-name").cloneNode(true),
-            popupSpeakers = popupWorkshop.querySelector(".popup-workshop__name");
+      el.addEventListener("click", () => {
+        const workshopItem = el.closest(".js-workshops-item");
+        const popupWorkshop = document.querySelector(".js-modal-workshop");
 
-          while (popupTitle.firstChild) {
-            popupTitle.removeChild(popupTitle.lastChild);
-            popupInfo.removeChild(popupInfo.lastChild);
-            popupDesc.removeChild(descNewNode.lastChild);
-            popupSpeakers.removeChild(popupSpeakers.lastChild);
-          }
-
-          popupTitle.appendChild(titleNewNode);
-          popupInfo.appendChild(infoNewNode);
-          popupDesc.appendChild(descNewNode);
-          popupSpeakers.appendChild(speakersNewNode);
-        }
+        ["js-title", "js-info", "js-desc", "js-name"].forEach((el) => {
+          const curEl = workshopItem.querySelector(`.${el}`);
+          popupWorkshop.querySelector(`.${el}`).lastChild.replaceWith(curEl.cloneNode(true));
+        });
       });
     });
   };
@@ -215,9 +216,11 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       1349: {
         slidesPerView: 2,
+        spaceBetween: 40,
       },
       1800: {
         slidesPerView: 2.6,
+        spaceBetween: 40,
       },
     },
     speed: 15000,

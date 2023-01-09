@@ -99,6 +99,9 @@
       grid-gap: 80px 20px;
 
       &__img {
+        max-width: 315px;
+        margin: 0;
+
         img {
           width: 315px;
           height: 315px;
@@ -109,7 +112,27 @@
   }
 }
 
-@media screen and (max-width: 1023px) {}
+@media screen and (max-width: 1023px) {
+  // .speakers {
+
+  //   &-block {
+  //     display: grid;
+  //     grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+  //     grid-gap: 80px 20px;
+
+  //     &__img {
+  //       max-width: 315px;
+  //       margin: 0;
+
+  //       img {
+  //         width: 315px;
+  //         height: 315px;
+  //         max-height: 315px;
+  //       }
+  //     }
+  //   }
+  // }
+}
 
 @media screen and (max-width: 767px) {}
 

@@ -3,7 +3,7 @@
   width: 100%;
 
   &__inner {
-    height: 100vh;
+    height: 920px;
     width: 100%;
     position: relative;
     z-index: 10;
@@ -13,12 +13,13 @@
       position: absolute;
       content: '';
       background: url(../assets/img/index/drops.png);
-      opacity: 0.5;
+      opacity: 0.7;
       background-repeat: round;
       width: 100%;
       height: 100%;
       z-index: 11;
       pointer-events: none;
+      mix-blend-mode: overlay;
     }
   }
 
@@ -124,6 +125,16 @@
     text-align: center;
     background: transparent;
     user-select: none;
+    transition: var(--base-transition);
+
+    &:hover {
+      background: #D05034;
+    }
+
+    &:active {
+      background: #C5553D;
+    }
+
 
     &:not(:last-child) {
       margin-bottom: 28px;
@@ -1216,24 +1227,6 @@
     margin-bottom: 80px;
   }
 
-  &__title {
-    font-family: NeutralFace;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 34px;
-    color: #10110D;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-
-  &__info {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #10110D;
-  }
-
   &__subtitle {
     font-weight: 400;
     font-size: 20px;
@@ -1241,20 +1234,6 @@
     text-transform: uppercase;
     color: #10110D;
     margin-bottom: 20px;
-  }
-
-  &__desc {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #10110D;
-  }
-
-  &__name {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #10110D;
   }
 
   &__close {
@@ -1276,6 +1255,40 @@
   .workshops__item-name {
     display: block;
   }
+
+  .workshops__item-title {
+    font-family: NeutralFace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #10110D;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .workshops__item-info {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #10110D;
+  }
+
+  .workshops__item-box {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #10110D;
+  }
+
+  .workshops__item-name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #10110D;
+  }
+
 }
 
 @media screen and (max-width: 1349px) {
@@ -1650,6 +1663,7 @@
     padding-top: 110px;
     padding-bottom: 24px;
   }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -2259,6 +2273,30 @@
         background: var(--green-color);
         color: var(--white-color);
       }
+    }
+  }
+
+  .popup-workshop {
+    width: 280px;
+    padding: 64px 18px;
+    height: auto;
+
+    .workshops__item-title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 14px;
+    }
+
+    .workshops__item-info,
+    .workshops__item-box,
+    .workshops__item-name {
+      font-size: 14px;
+      line-height: 125%;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      line-height: 24px;
     }
   }
 }
