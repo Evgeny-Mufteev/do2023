@@ -113,27 +113,132 @@
 }
 
 @media screen and (max-width: 1023px) {
-  // .speakers {
+  .speakers {
+    padding: 40px 0 80px;
 
-  //   &-block {
-  //     display: grid;
-  //     grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
-  //     grid-gap: 80px 20px;
+    &-block {
+      grid-template-columns: repeat(auto-fit, minmax(354px, 1fr));
 
-  //     &__img {
-  //       max-width: 315px;
-  //       margin: 0;
+      &__img {
+        max-width: 354px;
+        margin: 0 auto;
 
-  //       img {
-  //         width: 315px;
-  //         height: 315px;
-  //         max-height: 315px;
-  //       }
-  //     }
-  //   }
-  // }
+        img {
+          width: 354px;
+          height: 354px;
+          max-height: 354px;
+        }
+      }
+
+      &__fulname {
+        max-width: 334px;
+        margin: 28px auto 0;
+      }
+
+      &__desc {
+        max-width: 334px;
+        margin: 12px auto 0;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+  .speakers {
+    padding: 20px 0 50px;
 
-@media screen and (max-width: 479px) {}
+    &-block {
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      grid-gap: 60px 20px;
+
+      &__img {
+        max-width: 210px;
+
+        img {
+          width: 210px;
+          height: 210px;
+          max-height: 210px;
+        }
+      }
+
+      &__fulname {
+        max-width: 210px;
+        margin: 16px auto 0;
+      }
+
+      &__desc {
+        max-width: 210px;
+        margin: 8px auto 0;
+        font-size: 12px;
+        line-height: 14px;
+        -webkit-line-clamp: 5;
+      }
+
+      &__name,
+      &__surname {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    &__btn {
+      font-size: 16px;
+      line-height: 130%;
+      width: 165px;
+      height: 39px;
+      margin: 60px auto 0;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .speakers {
+    &-block {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__item {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      &__img {
+        max-width: 78px;
+        margin: 0 auto;
+
+        img {
+          width: 78px;
+          height: 78px;
+          max-height: 78px;
+        }
+      }
+
+      &__fulname {
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        align-items: flex-start;
+      }
+
+      &__name,
+      &__surname {
+        margin: 0;
+        text-align: left;
+      }
+
+      &__desc {
+        max-width: 100%;
+        text-align: left;
+      }
+
+      &__inner {
+        margin-left: 16px;
+      }
+    }
+
+    &__btn {
+      margin: 40px auto 0;
+    }
+  }
+}

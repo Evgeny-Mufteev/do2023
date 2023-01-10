@@ -80,93 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
     calculationsTimer("2023-03-09 19:41:00".replace(/-/g, "/"), el);
   });
 
-  // модальные окна
-  const handleModalPopup = (btn, blockModal, blockForm) => {
-    const btns = document.querySelectorAll(btn);
-    const modal = document.querySelector(blockModal);
-    const form = document.querySelector(blockForm);
-    const overlay = document.querySelector(".overlay");
-    const arrCloseButton = document.querySelectorAll(".js-close");
-    const selectInput = document.querySelectorAll(".js-sort-btn");
-
-    btns.forEach((btnItem) => {
-      btnItem.addEventListener("click", (evt) => {
-        evt.preventDefault();
-        modal.classList.add("active");
-        overlay.classList.add("active");
-        document.body.classList.add("no-scroll");
-      });
-    });
-
-    arrCloseButton.forEach((closeButton) => {
-      closeButton.addEventListener("click", (evt) => {
-        evt.preventDefault();
-        modal.classList.remove("active");
-        overlay.classList.remove("active");
-        document.body.classList.remove("no-scroll");
-        form?.reset();
-        selectInput.forEach((elements) => {
-          elements.value = "";
-        });
-      });
-    });
-
-    overlay.addEventListener("click", (evt) => {
-      evt.preventDefault();
-      modal.classList.remove("active");
-      overlay.classList.remove("active");
-      document.body.classList.remove("no-scroll");
-      form?.reset();
-      selectInput.forEach((elements) => {
-        elements.value = "";
-      });
-    });
-
-    if (window.screen.width > 767) {
-      document.addEventListener("keydown", (evt) => {
-        if (evt.key === "Escape") {
-          evt.preventDefault();
-          modal.classList.remove("active");
-          overlay.classList.remove("active");
-          document.body.classList.remove("no-scroll");
-          form?.reset();
-        }
-      });
-    }
-  };
-  handleModalPopup(".js-buy-ticket", ".js-modal-ticket", 'form[name="form-ticket"]');
-  handleModalPopup(".js-buy-partner", ".js-modal-partner", 'form[name="form-partner"]');
-  handleModalPopup(".js-buy-speaker", ".js-modal-speaker", 'form[name="form-speaker"]');
-  handleModalPopup(".js-workshop", ".js-modal-workshop");
-
-  // Валидация и отправка формы
-  const handleFormSubmit = (formItem, popup) => {
-    const form = document.querySelector(formItem);
-    const pristine = new Pristine(form);
-    const modalBlock = document.querySelector(popup);
-
-    form.addEventListener("submit", (evt) => {
-      evt.preventDefault();
-      const valid = pristine.validate();
-      if (valid) {
-        evt.preventDefault();
-        modalBlock.classList.add("sucsess");
-        const formData = Object.fromEntries(new FormData(evt.target).entries());
-        formData.phone = formData.phone.replace(/\D/g, "");
-        delete formData["privacy-policy"];
-
-        setTimeout(() => {
-          evt.target.submit();
-          form.reset();
-          console.log(formData);
-        }, 3000);
-      }
-    });
-  };
-  handleFormSubmit('form[name="form-ticket"]', ".js-modal-ticket");
-  handleFormSubmit('form[name="form-partner"]', ".js-modal-partner");
-  handleFormSubmit('form[name="form-speaker"]', ".js-modal-speaker");
-
   // Передатать id выбранного билета в форму
   const sendIdToForm = (el) => {
     el = el.target;
@@ -203,12 +116,17 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 12,
         slidesPerView: 1,
       },
+      374: {
+        spaceBetween: 12,
+        slidesPerView: 1.2,
+      },
       479: {
         spaceBetween: 24,
         slidesPerView: 1.3,
       },
       767: {
-        slidesPerView: 2.1,
+        spaceBetween: 24,
+        slidesPerView: 2.3,
       },
       1023: {
         spaceBetween: 40,
