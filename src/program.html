@@ -31,7 +31,7 @@
                 <a class="header-nav__link" href="award.html">Премия</a>
               </li>
               <li class="header-nav__item">
-                <a class="header-nav__link" href="javascript:void(0);">Программма</a>
+                <a class="header-nav__link" href="program.html">Программма</a>
               </li>
               <li class="header-nav__item">
                 <a class="header-nav__link" href="speakers.html">Спикеры</a>
@@ -52,96 +52,220 @@
     <main class="main">
       <div class="container">
         <section class="program">
-          <div class="program__btns">
-            <div class="program__btns-header">
-              <button class="btn red-btn">День 1</button>
-              <button class="btn black-btn">День 2</button>
+          <div class="tabs-container">
+            <div class="program__btns">
+              <div class="program__btns-header">
+                <button class="btn red-btn tabs__btn is-active">День 1</button>
+                <button class="btn black-btn tabs__btn">День 2</button>
+              </div>
+              <div class="program__btns-hall">
+                <button class="orange-btn tabs__btn2 is-active">Зал Orange — Лекторий</button>
+                <button class="green-btn tabs__btn2">Зал green — воркшопы</button>
+              </div>
             </div>
-            <div class="program__btns-hall">
-              <button class="orange-btn">Зал Orange — Лекторий</button>
-              <button class="green-btn">Зал green — воркшопы</button>
+
+            <!-- Первый день -->
+            <div class="program-block tabs-item is-active">
+              <div class="program-block__orange tabs-item2 is-active">
+                <h2 class="program-block__caption">Зал Orange — Лекторий</h2>
+
+                <div class="program-block__item">
+                  <div class="program-block__option">
+                    <div class="program-block__headline">10:00 - 10:15 Приветственное Д1 ЗЛ</div>
+                    <div class="program-block__position">Секция seo</div>
+                  </div>
+                </div>
+
+                <div class="program-block__item">
+                  <div class="program-block__header">
+                    <div class="program-block__time">10:00- 10:15</div>
+                    <div class="program-block__box">
+                      <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов
+                      </div>
+                      <div class="program-block__desc">
+                        <div class="program-block__author">Александр Чепукайтис</div>
+                        <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="program-block__item">
+                  <div class="program-block__header">
+                    <div class="program-block__time">10:00- 10:15</div>
+                    <div class="program-block__box">
+                      <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов
+                      </div>
+                      <div class="program-block__desc">
+                        <div class="program-block__author">Александр Чепукайтис</div>
+                        <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="program-block__option">
+                    <div class="program-block__headline">10:00 - 10:15 Coffee-break</div>
+                    <div class="program-block__position">Секция дизайн</div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="program-block__green tabs-item2">
+                <h2 class="program-block__caption">Зал green — воркшопы</h2>
+
+                <div class="program-block__item">
+                  <div class="program-block__option">
+                    <div class="program-block__headline">10:00 - 10:15 Приветственное Д1 3В</div>
+                  </div>
+                </div>
+
+                <div class="program-block__item">
+                  <div class="program-block__header">
+                    <div class="program-block__time">10:00- 10:15</div>
+                    <div class="program-block__box">
+                      <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов
+                      </div>
+                      <div class="program-block__desc">
+                        <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="program-block__item">
+                  <div class="program-block__header">
+                    <div class="program-block__time">10:00- 10:15</div>
+                    <div class="program-block__box">
+                      <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов
+                      </div>
+                      <div class="program-block__desc">
+                        <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="program-block__option">
+                    <div class="program-block__headline">10:00 - 10:15 Coffee-break</div>
+                  </div>
+                </div>
+
+                <div class="program-block__item">
+                  <div class="program-block__header">
+                    <div class="program-block__time">10:00- 10:15</div>
+                    <div class="program-block__box">
+                      <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов
+                      </div>
+                      <div class="program-block__desc">
+                        <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="program-block__item">
+                  <div class="program-block__header">
+                    <div class="program-block__time">10:00- 10:15</div>
+                    <div class="program-block__box">
+                      <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов
+                      </div>
+                      <div class="program-block__desc">
+                        <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="program-block">
-            <div class="program-block__orange">
-              <h2 class="program-block__caption">Зал Orange — Лекторий</h2>
+            <!-- Второй день -->
+            <div class="program-block tabs-item">
+              <div class="program-block__orange tabs-item3 is-active">
+                <h2 class="program-block__caption">Зал Orange — Лекторий 2</h2>
 
-              <div class="program-block__item">
-                <div class="program-block__option">
-                  <div class="program-block__headline"> 10:00 - 10:15 Приветственное слово</div>
-                  <div class="program-block__position">Секция seo</div>
+                <div class="program-block__item">
+                  <div class="program-block__option">
+                    <div class="program-block__headline">10:00 - 10:15 Приветственное Д2 ЗЛ</div>
+                    <div class="program-block__position">Секция seo</div>
+                  </div>
                 </div>
-              </div>
 
-              <div class="program-block__item">
-                <div class="program-block__header">
-                  <div class="program-block__time">10:00- 10:15</div>
-                  <div class="program-block__box">
-                    <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов</div>
-                    <div class="program-block__desc">
-                      <div class="program-block__author">Александр Чепукайтис</div>
-                      <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                <div class="program-block__item">
+                  <div class="program-block__header">
+                    <div class="program-block__time">10:00- 10:15</div>
+                    <div class="program-block__box">
+                      <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов
+                      </div>
+                      <div class="program-block__desc">
+                        <div class="program-block__author">Александр Чепукайтис</div>
+                        <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="program-block__item">
-                <div class="program-block__header">
-                  <div class="program-block__time">10:00- 10:15</div>
-                  <div class="program-block__box">
-                    <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов</div>
-                    <div class="program-block__desc">
-                      <div class="program-block__author">Александр Чепукайтис</div>
-                      <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                <div class="program-block__item">
+                  <div class="program-block__header">
+                    <div class="program-block__time">10:00- 10:15</div>
+                    <div class="program-block__box">
+                      <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов
+                      </div>
+                      <div class="program-block__desc">
+                        <div class="program-block__author">Александр Чепукайтис</div>
+                        <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="program-block__option">
+                    <div class="program-block__headline">10:00 - 10:15 Coffee-break</div>
+                    <div class="program-block__position">Секция дизайн</div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="program-block__green tabs-item3">
+                <h2 class="program-block__caption">Зал green — воркшопы 2</h2>
+
+                <div class="program-block__item">
+                  <div class="program-block__option">
+                    <div class="program-block__headline">10:00 - 10:15 Приветственное Д2 ЗВ</div>
+                  </div>
+                </div>
+
+                <div class="program-block__item">
+                  <div class="program-block__header">
+                    <div class="program-block__time">10:00- 10:15</div>
+                    <div class="program-block__box">
+                      <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов
+                      </div>
+                      <div class="program-block__desc">
+                        <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="program-block__option">
-                  <div class="program-block__headline">10:00 - 10:15 Coffee-break</div>
-                  <div class="program-block__position">Секция дизайн</div>
-                </div>
-              </div>
 
-            </div>
-            <div class="program-block__green">
-              <h2 class="program-block__caption">Зал green — воркшопы</h2>
-
-              <div class="program-block__item">
-                <div class="program-block__option">
-                  <div class="program-block__headline"> 10:00 - 10:15 Приветственное слово</div>
-                </div>
-              </div>
-
-              <div class="program-block__item">
-                <div class="program-block__header">
-                  <div class="program-block__time">10:00- 10:15</div>
-                  <div class="program-block__box">
-                    <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов</div>
-                    <div class="program-block__desc">
-                      <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                <div class="program-block__item">
+                  <div class="program-block__header">
+                    <div class="program-block__time">10:00- 10:15</div>
+                    <div class="program-block__box">
+                      <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов
+                      </div>
+                      <div class="program-block__desc">
+                        <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div class="program-block__item">
-                <div class="program-block__header">
-                  <div class="program-block__time">10:00- 10:15</div>
-                  <div class="program-block__box">
-                    <div class="program-block__title">Как не тратить лишние деньги на SEO, анализируя конкурентов</div>
-                    <div class="program-block__desc">
-                      <div class="program-block__section">Руководитель отдела SEO. Агентство R-Top, Нижний Новгород
-                      </div>
-                    </div>
+                  <div class="program-block__option">
+                    <div class="program-block__headline">10:00 - 10:15 Coffee-break</div>
                   </div>
-                </div>
-                <div class="program-block__option">
-                  <div class="program-block__headline">10:00 - 10:15 Coffee-break</div>
                 </div>
               </div>
             </div>
@@ -183,97 +307,6 @@
   </div>
   <div class="overlay"></div>
 
-  <div class="popup-ticket _modified js-modal-speaker">
-    <div class="popup-modal">
-      <div class="popup-modal__title">Успешно!</div>
-      <div class="popup-modal__subtitle">Мы свяжемся с вами в ближайшее время</div>
-    </div>
-    <div class="popup-ticket__inner">
-      <div class="popup-ticket__block">
-        <div class="popup-ticket__header">
-          <h4 class="popup-ticket__title">Стать спикером</h4>
-        </div>
-        <form action="#3" class="form-ticket js-form" novalidate method="get" name="form-speaker">
-
-          <div class="popup-ticket__box">
-            <div class="popup-ticket__input-wrap form-group">
-              <input type="text" class="popup-ticket__input form-control" placeholder="ФИО спикера*" required
-                data-pristine-required-message="необходимо заполнить поле" name="full-name">
-            </div>
-
-            <div class="popup-ticket__input-wrap form-group">
-              <input type="text" class="popup-ticket__input form-control" placeholder="Компания*" required
-                data-pristine-required-message="необходимо заполнить поле" name="company">
-            </div>
-
-            <div class="popup-ticket__input-wrap form-group js-sort-box">
-              <input type="text" class="popup-ticket__input selecting-item js-sort-btn form-control"
-                placeholder="Направление деятельности*" readonly required name="selected-item"
-                data-pristine-required-message="необходимо заполнить поле">
-              <svg class="icon chevron-up">
-                <use href="./assets/svg/sprite.svg#chevron-up"></use>
-              </svg>
-              <ul class="popup-ticket__list js-sort-list">
-                <li class="popup-ticket__item js-sort-item">seo</li>
-                <li class="popup-ticket__item js-sort-item">smm</li>
-                <li class="popup-ticket__item js-sort-item">дизайн</li>
-                <li class="popup-ticket__item js-sort-item">креатив</li>
-                <li class="popup-ticket__item js-sort-item">infuence marketing</li>
-                <li class="popup-ticket__item js-sort-item">продажи</li>
-                <li class="popup-ticket__item js-sort-item">управление проектами</li>
-                <li class="popup-ticket__item js-sort-item">реклама</li>
-                <li class="popup-ticket__item js-sort-item">другое</li>
-              </ul>
-            </div>
-
-
-            <div class="popup-ticket__input-wrap form-group">
-              <input type="email" class="popup-ticket__input form-control" placeholder="Email" name="email">
-            </div>
-
-            <div class="popup-ticket__input-wrap form-group">
-              <input type="tel" class="popup-ticket__input form-control js-phone" placeholder="Номер телефона*" required
-                data-pristine-required-message="необходимо заполнить поле" minlength="18" name="phone">
-            </div>
-
-            <div class="popup-ticket__checkbox-wrap form-group">
-              <input type="checkbox" class="popup-ticket__checkbox form-control" id="privacy-policy3"
-                name="privacy-policy" required data-pristine-required-message="необходимо заполнить поле">
-              <label for="privacy-policy3">
-                <span class="privacy-policy__text">
-                  Я согласен на обработку персональных данных и ознакомился с
-                  <a href="./assets/plugins/confidential_2023.pdf" class="privacy-policy__link" target="_blank">
-                    политикой
-                    конфиденциальности</a>
-                </span>
-              </label>
-            </div>
-          </div>
-          <button type="submit" class="btn red-btn">Отправить заявку</button>
-        </form>
-      </div>
-    </div>
-    <div class="popup-ticket__close js-close">
-      <svg class="icon close">
-        <use href="./assets/svg/sprite.svg#close"></use>
-      </svg>
-    </div>
-  </div>
-
-  <div class="sucsess-popup">
-
-    <div class="sucsess-popup__block">
-      <div class="sucsess-popup__title">Успешно!</div>
-      <div class="sucsess-popup__text">Мы свяжемся с вами в ближайшее время</div>
-    </div>
-    <div class="popup-ticket__close js-close">
-      <svg class="icon close">
-        <use href="./assets/svg/sprite.svg#close"></use>
-      </svg>
-    </div>
-
-  </div>
-
   <div class="toTop">
     <svg class="icon scroll-up">
       <use href="./assets/svg/sprite.svg#scroll-up"></use>
@@ -282,7 +315,7 @@
 
   <script src="assets/plugins/pristine/pristine.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/speakers.js"></script>
+  <script src="js/program.js"></script>
 </body>
 
 </html>

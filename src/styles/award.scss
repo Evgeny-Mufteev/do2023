@@ -44,25 +44,6 @@
     padding: 100px 0 205px;
   }
 
-  &__title {
-    font-family: NeutralFace;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 70px;
-    line-height: 70px;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-  }
-
-  &__subtitle {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    color: var(--color-gray3);
-    max-width: 640px;
-  }
-
 }
 
 .section__title {
@@ -631,7 +612,4 @@
     }
   }
 
-  .nominations {}
-
-  .application {}
 }

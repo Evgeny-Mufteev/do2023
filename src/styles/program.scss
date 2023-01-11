@@ -1,3 +1,10 @@
+.header {
+  background-image: url(../assets/img/program/bg-header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .program {
   padding: 60px 0 80px;
 
@@ -20,21 +27,39 @@
         font-size: 28px;
         line-height: 34px;
         border: 1.5px solid #187437;
+        color: #187437;
         border-radius: 600px;
         padding: 16px 30px;
         background: none;
+      }
+
+      .green-btn.is-active {
+        color: #10110D;
+        background: #187437;
       }
 
       .orange-btn {
         font-family: NeutralFace;
         font-size: 28px;
         line-height: 34px;
-        background: #EA6143;
         border-radius: 600px;
-        border: none;
+        border: 1px solid #EA6143;
+        color: #EA6143;
+        background: transparent;
         margin-right: 40px;
         padding: 16px 30px;
       }
+
+      .orange-btn.is-active {
+        color: #10110D;
+        background: #EA6143;
+      }
+    }
+
+    .btn {
+      width: 130px;
+      height: 56px;
+      padding: 0;
     }
   }
 
@@ -123,7 +148,7 @@
     }
 
     &__time {
-      width: 120px;
+      min-width: 120px;
       font-family: NeutralFace;
       font-style: normal;
       font-weight: 400;
@@ -159,4 +184,198 @@
     }
   }
 
+  .tabs-item {
+    display: none;
+
+    &.is-active {
+      display: flex;
+    }
+  }
+
+  .red-btn.tabs__btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #EA6143;
+
+    &.is-active {
+      background: #EA6143;
+      color: #10110D;
+    }
+
+  }
+
+  .black-btn.tabs__btn {
+    &.is-active {
+      background: #fff;
+      color: #10110D;
+    }
+  }
+
 }
+
+@media screen and (max-width: 1349px) {
+  .program {
+    &-block {
+      &__orange {
+        width: 482px;
+      }
+
+      &__green {
+        width: 482px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .program {
+    &__btns {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-header {
+        margin-bottom: 32px;
+      }
+
+      &-hall {
+        display: flex;
+
+        .orange-btn,
+        .green-btn {
+          padding: 0;
+          font-size: 20px;
+          line-height: 24px;
+          width: 331px;
+          height: 56px;
+        }
+      }
+    }
+
+    &-block {
+      flex-wrap: wrap;
+      margin-top: 80px;
+
+      &__orange {
+        width: 100%;
+      }
+
+      &__green {
+        width: 100%;
+      }
+
+      &__caption {
+        display: none;
+      }
+    }
+
+    .tabs-item2,
+    .tabs-item3 {
+      display: none;
+
+      &.is-active {
+        flex-direction: column;
+        display: flex;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .program {
+    padding: 20px 0 50px;
+
+    &__btns {
+      &-header {
+        margin-bottom: 25px;
+      }
+
+      .btn:first-child {
+        margin-right: 24px;
+      }
+
+      &-hall {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .orange-btn {
+          margin-right: 0;
+          margin-bottom: 25px;
+        }
+
+        .orange-btn,
+        .green-btn {
+          padding: 0;
+          font-size: 16px;
+          line-height: 130%;
+          width: 260px;
+          height: 39px;
+        }
+      }
+    }
+
+    .btn {
+      width: 96px;
+      height: 39px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    &-block {
+      margin-top: 50px;
+
+      &__orange .program-block__desc,
+      &__green .program-block__desc {
+        margin-top: 14px;
+      }
+
+      &__headline {
+        font-size: 16px;
+        line-height: 130%;
+        padding: 8px 16px 6px;
+      }
+
+      &__position {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 16px 0;
+      }
+
+      &__header {
+        padding: 20px 0;
+      }
+
+      &__time {
+        min-width: 100px;
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      &__box {
+        margin-left: 8px;
+      }
+
+      &__title {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      &__author {
+        font-size: 14px;
+        line-height: 125%;
+        margin-bottom: 2px;
+      }
+
+      &__section {
+        font-size: 14px;
+        line-height: 125%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {}
