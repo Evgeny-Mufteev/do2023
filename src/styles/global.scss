@@ -488,7 +488,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header {
-  background-image: url(../assets/img/award/bg-header.jpg);
+  background-image: url(../assets/img/award/bg-header.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -559,7 +559,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .footer {
-  background-image: url(../assets/img/index/bg-footer.png);
+  background-image: url(../assets/img/index/bg-footer.webp);
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 235px;
@@ -616,6 +616,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 72px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &-link {
       font-family: 'Inter';
@@ -691,7 +692,7 @@ body::-webkit-scrollbar-thumb {
 .popup-ticket {
   width: 664px;
   height: 700px;
-  background-image: url(../assets/img/index/popup-ticket.png);
+  background-image: url(../assets/img/index/popup-ticket.webp);
   border-radius: 30px;
   position: fixed;
   top: 50%;
@@ -966,6 +967,15 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 1349px) {
 
   .header {
@@ -1156,7 +1166,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 
     &.sucsess {
-      background-image: url(../assets/img/index/popup-ticket.png);
+      background-image: url(../assets/img/index/popup-ticket.webp);
       background-size: cover;
       background-repeat: no-repeat;
 

@@ -12,7 +12,7 @@
     &::after {
       position: absolute;
       content: '';
-      background: url(../assets/img/index/drops.png);
+      background: url(../assets/img/index/drops.webp);
       opacity: 0.7;
       background-repeat: round;
       width: 100%;
@@ -24,7 +24,7 @@
   }
 
   &__left {
-    background-image: url(../assets/img/index/promo.jpg);
+    background-image: url(../assets/img/index/promo.webp);
     width: 65%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,11 +128,11 @@
     transition: var(--base-transition);
 
     &:hover {
-      background: #D05034;
+      background: var(--red-color-hover);
     }
 
     &:active {
-      background: #C5553D;
+      background: var(--red-color-press);
     }
 
 
@@ -452,6 +452,8 @@
       display: flex;
       align-items: center;
       text-transform: lowercase;
+      background: transparent;
+      border: none;
       color: var(--red-color);
       display: flex;
       justify-content: flex-start;
@@ -747,7 +749,7 @@
 
   &::before {
     content: '';
-    background-image: url(../assets/img/index/flower.png);
+    background-image: url(../assets/img/index/flower.webp);
     background-repeat: no-repeat;
     background-size: contain;
     width: 715px;
@@ -932,7 +934,7 @@
 .popup-workshop {
   width: 592px;
   height: 100vh;
-  background: #EA6143;
+  background: var(--red-color);
   position: fixed;
   right: 0;
   top: 50%;
@@ -954,7 +956,7 @@
     font-size: 20px;
     line-height: 24px;
     text-transform: uppercase;
-    color: #10110D;
+    color: var(--main-color);
     margin-bottom: 20px;
   }
 
@@ -969,7 +971,7 @@
   svg.icon.close {
     max-width: 22px;
     max-height: 22px;
-    fill: var(#10110D);
+    fill: var(--main-color);
   }
 
   .workshops__item-info,
@@ -984,7 +986,7 @@
     font-weight: 400;
     font-size: 28px;
     line-height: 34px;
-    color: #10110D;
+    color: var(--main-color);
     height: auto;
     margin-bottom: 20px;
   }
@@ -994,21 +996,21 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #10110D;
+    color: var(--main-color);
   }
 
   .workshops__item-box {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #10110D;
+    color: var(--main-color);
   }
 
   .workshops__item-name {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #10110D;
+    color: var(--main-color);
   }
 
 }
@@ -1850,12 +1852,14 @@
   .popup-workshop {
     width: 280px;
     padding: 64px 18px;
-    height: auto;
+    height: 100%;
+    overflow-y: auto;
 
     .workshops__item-title {
       font-size: 24px;
       line-height: 32px;
       margin-bottom: 14px;
+      text-align: left;
     }
 
     .workshops__item-info,
@@ -1915,6 +1919,8 @@
     }
 
     &__item {
+      align-items: center;
+
       &-wrap {
         grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
         grid-gap: 48px 0px;
@@ -1926,6 +1932,7 @@
 
       &-title {
         margin-bottom: 10px;
+        text-align: center;
       }
 
       &-link {

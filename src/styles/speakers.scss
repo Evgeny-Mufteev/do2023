@@ -1,5 +1,5 @@
 .header {
-  background-image: url(../assets/img/speakers/header.jpg);
+  background-image: url(../assets/img/speakers/header.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -80,7 +80,7 @@
     font-size: 20px;
     line-height: 24px;
     text-transform: uppercase;
-    color: #10110D;
+    color: var(--main-color);
     width: 216px;
     height: 56px;
     margin: 80px auto 0;
